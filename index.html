@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Star Shop – Fresh Finds, Best Prices</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<style>
+  :root {
+    --gold: #D4A843;
+    --gold-light: #F0C96A;
+    --deep: #0D0D0D;
+    --surface: #141414;
+    --card: #1E1E1E;
+    --text: #F5F0E8;
+    --muted: #888;
+    --accent: #E8C76A;
+    --radius: 12px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--deep);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 5%;
+    background: rgba(13,13,13,0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(212,168,67,0.15);
+  }
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem; font-weight: 900;
+    color: var(--gold);
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--text); }
+  .nav-right { display: flex; align-items: center; gap: 20px; }
+  .cart-btn {
+    position: relative; cursor: pointer;
+    background: var(--gold); border: none; border-radius: 50%;
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; color: var(--deep);
+    transition: transform 0.2s;
+  }
+  .cart-btn:hover { transform: scale(1.1); }
+  .cart-count {
+    position: absolute; top: -4px; right: -4px;
+    background: #E63946; color: white;
+    border-radius: 50%; width: 20px; height: 20px;
+    font-size: 0.7rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    display: none;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative; height: 100vh; min-height: 600px;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; overflow: hidden;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    background: url('https://i.ibb.co/xK4LnhHL/360-Banner1-11zon.jpg') center/cover no-repeat;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(13,13,13,1) 100%);
+  }
+  .hero-content { position: relative; z-index: 1; padding: 0 20px; }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(212,168,67,0.15);
+    border: 1px solid rgba(212,168,67,0.4);
+    color: var(--gold-light);
+    padding: 6px 18px; border-radius: 50px;
+    font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 900; line-height: 1.05;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    margin-bottom: 16px;
+  }
+  .hero h1 em { color: var(--gold); font-style: normal; }
+  .hero-sub {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: rgba(245,240,232,0.7);
+    margin-bottom: 36px;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--deep); padding: 15px 40px;
+    border-radius: 50px; font-weight: 600; font-size: 1rem;
+    text-decoration: none; border: none; cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 30px rgba(212,168,67,0.35);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(212,168,67,0.5); }
+
+  /* ── PRODUCTS SECTION ── */
+  #products {
+    padding: 80px 5% 60px;
+  }
+  .section-header { text-align: center; margin-bottom: 50px; }
+  .section-tag {
+    display: inline-block; color: var(--gold);
+    font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+  }
+
+  /* Carousel */
+  .carousel-wrap { position: relative; }
+  .carousel {
+    display: flex; gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 10px;
+  }
+  .carousel::-webkit-scrollbar { display: none; }
+  .product-card {
+    scroll-snap-align: start;
+    flex: 0 0 280px;
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,168,67,0.2);
+  }
+  .product-img {
+    width: 100%; aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    background: #222;
+  }
+  .product-info { padding: 18px; }
+  .product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .product-price {
+    color: var(--gold);
+    font-weight: 600; font-size: 1.05rem;
+    margin-bottom: 14px;
+  }
+  .add-cart-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(212,168,67,0.4);
+    color: var(--gold);
+    padding: 10px; border-radius: 8px;
+    cursor: pointer; font-family: 'DM Sans', sans-serif;
+    font-weight: 500; font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+  .add-cart-btn:hover {
+    background: var(--gold); color: var(--deep);
+  }
+  .added-badge {
+    position: absolute; top: 12px; right: 12px;
+    background: var(--gold); color: var(--deep);
+    font-size: 0.7rem; font-weight: 700;
+    padding: 4px 10px; border-radius: 20px;
+    display: none;
+  }
+
+  /* Carousel nav buttons */
+  .carousel-arrows { display: flex; justify-content: center; gap: 12px; margin-top: 28px; }
+  .c-arrow {
+    background: var(--card); border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text); width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 1.1rem; transition: all 0.2s;
+  }
+  .c-arrow:hover { background: var(--gold); color: var(--deep); border-color: var(--gold); }
+
+  /* ── CART DRAWER ── */
+  .overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6); z-index: 200;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+  }
+  .overlay.open { opacity: 1; pointer-events: all; }
+  .cart-drawer {
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: min(420px, 100vw);
+    background: var(--surface);
+    border-left: 1px solid rgba(255,255,255,0.07);
+    z-index: 201; padding: 28px;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+    overflow-y: auto;
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .cart-drawer.open { transform: translateX(0); }
+  .drawer-header {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .drawer-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+  }
+  .close-btn {
+    background: none; border: none; color: var(--muted);
+    font-size: 1.5rem; cursor: pointer; padding: 4px;
+    transition: color 0.2s;
+  }
+  .close-btn:hover { color: var(--text); }
+  .cart-items { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+  .cart-item {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--card); border-radius: var(--radius);
+    padding: 12px;
+  }
+  .ci-img { width: 56px; height: 56px; object-fit: cover; border-radius: 8px; background: #222; }
+  .ci-info { flex: 1; }
+  .ci-name { font-weight: 500; font-size: 0.9rem; }
+  .ci-price { color: var(--gold); font-size: 0.85rem; }
+  .ci-qty {
+    display: flex; align-items: center; gap: 8px; margin-top: 6px;
+  }
+  .qty-btn {
+    background: rgba(255,255,255,0.08); border: none; color: var(--text);
+    width: 26px; height: 26px; border-radius: 6px; cursor: pointer;
+    font-size: 1rem; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+  }
+  .qty-btn:hover { background: var(--gold); color: var(--deep); }
+  .qty-val { font-size: 0.9rem; min-width: 20px; text-align: center; }
+  .remove-item { background: none; border: none; color: #e06060; cursor: pointer; font-size: 1rem; margin-left: auto; }
+
+  .cart-total {
+    background: var(--card); border-radius: var(--radius);
+    padding: 16px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .cart-total span { color: var(--muted); }
+  .cart-total strong { color: var(--gold); font-size: 1.2rem; }
+
+  /* Order form */
+  .order-form { display: flex; flex-direction: column; gap: 12px; }
+  .order-form h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding-bottom: 10px;
+  }
+  .form-input {
+    background: var(--card); border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text); border-radius: 8px; padding: 12px 14px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
+    outline: none; transition: border-color 0.2s;
+  }
+  .form-input:focus { border-color: var(--gold); }
+  .form-input::placeholder { color: var(--muted); }
+
+  .send-order-btn {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border: none; color: var(--deep);
+    padding: 15px; border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700; font-size: 1rem; cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 6px 24px rgba(212,168,67,0.3);
+  }
+  .send-order-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(212,168,67,0.5); }
+  .send-order-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+  .empty-cart {
+    text-align: center; padding: 40px 0; color: var(--muted);
+  }
+  .empty-cart .icon { font-size: 3rem; margin-bottom: 10px; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center; padding: 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: var(--muted); font-size: 0.85rem;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* ── WHATSAPP FLOAT ── */
+  .wa-btn {
+    position: fixed; bottom: 28px; right: 28px; z-index: 150;
+    background: #25D366; color: white;
+    width: 56px; height: 56px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: pulse-wa 2.5s infinite;
+  }
+  .wa-btn:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(37,211,102,0.6); animation: none; }
+  @keyframes pulse-wa {
+    0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 6px 36px rgba(37,211,102,0.7); }
+  }
+
+  /* Toast */
+  .toast {
+    position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%) translateY(20px);
+    background: var(--card); color: var(--text);
+    border: 1px solid rgba(212,168,67,0.3);
+    padding: 12px 24px; border-radius: 50px;
+    font-size: 0.9rem; z-index: 300;
+    opacity: 0; transition: all 0.3s;
+    pointer-events: none;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  @media (max-width: 600px) {
+    .product-card { flex: 0 0 240px; }
+    nav { padding: 14px 4%; }
+    #products { padding: 60px 4% 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">The <span>Star</span> ★ Shop</div>
+  <div class="nav-right">
+    <button class="cart-btn" onclick="openCart()" title="Cart">
+      🛒
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">★ Welcome to the Store</div>
+    <h1>The <em>Star</em> Shop</h1>
+    <p class="hero-sub">Fresh Finds, Best Prices</p>
+    <a href="#products" class="btn-primary">Shop Now →</a>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-header">
+    <div class="section-tag">★ Our Collection</div>
+    <h2>Featured Products</h2>
+  </div>
+  <div class="carousel-wrap">
+    <div class="carousel" id="carousel">
+
+      <div class="product-card" data-id="1" data-name="Star Mug" data-price="299" data-img="https://i.ibb.co/TxsfJcCD/Mug-Insta-Post-02.png">
+        <img class="product-img" src="https://i.ibb.co/TxsfJcCD/Mug-Insta-Post-02.png" alt="Star Mug">
+        <div class="product-info">
+          <div class="product-name">Star Mug</div>
+          <div class="product-price">₹299</div>
+          <button class="add-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="added-badge">✓ Added</div>
+      </div>
+
+      <div class="product-card" data-id="2" data-name="Star Special" data-price="499" data-img="https://i.ibb.co/DPJGHDGv/STAR-1.png">
+        <img class="product-img" src="https://i.ibb.co/DPJGHDGv/STAR-1.png" alt="Star Special">
+        <div class="product-info">
+          <div class="product-name">Star Special</div>
+          <div class="product-price">₹499</div>
+          <button class="add-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="added-badge">✓ Added</div>
+      </div>
+
+      <div class="product-card" data-id="3" data-name="Star T-Shirt" data-price="699" data-img="https://i.ibb.co/608FqBRf/Tshirt-Insta-Post-1.png">
+        <img class="product-img" src="https://i.ibb.co/608FqBRf/Tshirt-Insta-Post-1.png" alt="Star T-Shirt">
+        <div class="product-info">
+          <div class="product-name">Star T-Shirt</div>
+          <div class="product-price">₹699</div>
+          <button class="add-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="added-badge">✓ Added</div>
+      </div>
+
+      <!-- Repeat for visual richness -->
+      <div class="product-card" data-id="4" data-name="Star Mug (Gift Box)" data-price="399" data-img="https://i.ibb.co/TxsfJcCD/Mug-Insta-Post-02.png">
+        <img class="product-img" src="https://i.ibb.co/TxsfJcCD/Mug-Insta-Post-02.png" alt="Star Mug Gift">
+        <div class="product-info">
+          <div class="product-name">Star Mug (Gift Box)</div>
+          <div class="product-price">₹399</div>
+          <button class="add-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="added-badge">✓ Added</div>
+      </div>
+
+      <div class="product-card" data-id="5" data-name="Star T-Shirt (Premium)" data-price="899" data-img="https://i.ibb.co/608FqBRf/Tshirt-Insta-Post-1.png">
+        <img class="product-img" src="https://i.ibb.co/608FqBRf/Tshirt-Insta-Post-1.png" alt="Star T-Shirt Premium">
+        <div class="product-info">
+          <div class="product-name">Star T-Shirt (Premium)</div>
+          <div class="product-price">₹899</div>
+          <button class="add-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+        </div>
+        <div class="added-badge">✓ Added</div>
+      </div>
+
+    </div>
+    <div class="carousel-arrows">
+      <button class="c-arrow" onclick="scrollCarousel(-1)">←</button>
+      <button class="c-arrow" onclick="scrollCarousel(1)">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2024 The Star Shop &nbsp;|&nbsp; <a href="mailto:afrozask143@gmail.com">afrozask143@gmail.com</a></p>
+  <p style="margin-top:6px">Made with ★ love</p>
+</footer>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="drawer-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="close-btn" onclick="closeCart()">✕</button>
+  </div>
+
+  <div class="cart-items" id="cartItems">
+    <div class="empty-cart">
+      <div class="icon">🛍️</div>
+      <p>Your cart is empty</p>
+    </div>
+  </div>
+
+  <div class="cart-total" id="cartTotal" style="display:none">
+    <span>Total</span>
+    <strong id="totalPrice">₹0</strong>
+  </div>
+
+  <div class="order-form" id="orderForm" style="display:none">
+    <h4>📦 Complete Your Order</h4>
+    <input type="text" class="form-input" id="custName" placeholder="Your Name *" required>
+    <input type="tel" class="form-input" id="custPhone" placeholder="Phone Number *" required>
+    <input type="email" class="form-input" id="custEmail" placeholder="Your Email (optional)">
+    <textarea class="form-input" id="custNote" placeholder="Special instructions (optional)" rows="2" style="resize:none"></textarea>
+    <button class="send-order-btn" onclick="sendOrder()" id="sendBtn">Send Order via Email ✉️</button>
+  </div>
+</div>
+
+<!-- WHATSAPP -->
+<a class="wa-btn" href="https://wa.me/919767450186" target="_blank" title="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="white">
+    <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.7C11.6 28.4 13.8 29 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3zm6.8 18.4c-.3.8-1.5 1.5-2.1 1.6-.5.1-1.2.1-1.9-.1-.5-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.2-.2-1.4-1.9-1.4-3.6 0-1.7.9-2.5 1.2-2.8.3-.4.7-.4.9-.4h.7c.2 0 .5 0 .7.6.3.7 1 2.4 1.1 2.6.1.2.1.4 0 .6-.1.2-.2.3-.4.5-.2.2-.4.4-.5.5-.2.2-.4.4-.2.8.3.4 1.2 1.9 2.5 3 1.7 1.5 3.1 1.9 3.6 2.1.4.2.7.1.9-.1.3-.3.9-1 1.1-1.4.2-.3.5-.3.8-.2.3.1 2 .9 2.4 1.1.3.2.5.3.6.5.1.3 0 1.4-.4 2.2z"/>
+  </svg>
+</a>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+  // EmailJS init – replace with your actual public key
+  emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+
+  let cart = [];
+
+  function addToCart(btn) {
+    const card = btn.closest('.product-card');
+    const id = card.dataset.id;
+    const existing = cart.find(i => i.id === id);
+    if (existing) {
+      existing.qty++;
+    } else {
+      cart.push({
+        id, 
+        name: card.dataset.name,
+        price: parseInt(card.dataset.price),
+        img: card.dataset.img,
+        qty: 1
+      });
+      card.querySelector('.added-badge').style.display = 'block';
+    }
+    updateCartUI();
+    showToast(`"${card.dataset.name}" added to cart!`);
+  }
+
+  function updateCartUI() {
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+    const countEl = document.getElementById('cartCount');
+    countEl.textContent = count;
+    countEl.style.display = count > 0 ? 'flex' : 'none';
+
+    const container = document.getElementById('cartItems');
+    const totalBox = document.getElementById('cartTotal');
+    const form = document.getElementById('orderForm');
+
+    if (cart.length === 0) {
+      container.innerHTML = '<div class="empty-cart"><div class="icon">🛍️</div><p>Your cart is empty</p></div>';
+      totalBox.style.display = 'none';
+      form.style.display = 'none';
+      return;
+    }
+
+    totalBox.style.display = 'flex';
+    form.style.display = 'flex';
+
+    container.innerHTML = cart.map(item => `
+      <div class="cart-item">
+        <img class="ci-img" src="${item.img}" alt="${item.name}">
+        <div class="ci-info">
+          <div class="ci-name">${item.name}</div>
+          <div class="ci-price">₹${item.price}</div>
+          <div class="ci-qty">
+            <button class="qty-btn" onclick="changeQty('${item.id}',-1)">−</button>
+            <span class="qty-val">${item.qty}</span>
+            <button class="qty-btn" onclick="changeQty('${item.id}',1)">+</button>
+          </div>
+        </div>
+        <button class="remove-item" onclick="removeItem('${item.id}')" title="Remove">🗑️</button>
+      </div>
+    `).join('');
+
+    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+    document.getElementById('totalPrice').textContent = '₹' + total;
+  }
+
+  function changeQty(id, delta) {
+    const item = cart.find(i => i.id === id);
+    if (!item) return;
+    item.qty += delta;
+    if (item.qty <= 0) removeItem(id); else updateCartUI();
+  }
+
+  function removeItem(id) {
+    cart = cart.filter(i => i.id !== id);
+    // hide badge
+    document.querySelectorAll('.product-card').forEach(card => {
+      if (card.dataset.id === id) card.querySelector('.added-badge').style.display = 'none';
+    });
+    updateCartUI();
+  }
+
+  function openCart() {
+    document.getElementById('cartDrawer').classList.add('open');
+    document.getElementById('overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCart() {
+    document.getElementById('cartDrawer').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function scrollCarousel(dir) {
+    const c = document.getElementById('carousel');
+    c.scrollBy({ left: dir * 300, behavior: 'smooth' });
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
+  }
+
+  async function sendOrder() {
+    const name = document.getElementById('custName').value.trim();
+    const phone = document.getElementById('custPhone').value.trim();
+    const email = document.getElementById('custEmail').value.trim();
+    const note = document.getElementById('custNote').value.trim();
+
+    if (!name) { showToast('Please enter your name'); return; }
+    if (!phone) { showToast('Please enter your phone number'); return; }
+    if (cart.length === 0) { showToast('Your cart is empty!'); return; }
+
+    const btn = document.getElementById('sendBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    const itemList = cart.map(i => `• ${i.name} × ${i.qty} = ₹${i.price * i.qty}`).join('\n');
+    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+
+    const templateParams = {
+      to_email: 'afrozask143@gmail.com',
+      from_name: name,
+      customer_phone: phone,
+      customer_email: email || 'Not provided',
+      order_items: itemList,
+      order_total: '₹' + total,
+      special_note: note || 'None',
+    };
+
+    try {
+      // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS values
+      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams);
+      showToast('✅ Order sent! We\'ll contact you soon.');
+      cart = [];
+      document.querySelectorAll('.added-badge').forEach(b => b.style.display = 'none');
+      document.getElementById('custName').value = '';
+      document.getElementById('custPhone').value = '';
+      document.getElementById('custEmail').value = '';
+      document.getElementById('custNote').value = '';
+      updateCartUI();
+      setTimeout(closeCart, 1500);
+    } catch (err) {
+      console.error(err);
+      // Fallback: open email client
+      const subject = encodeURIComponent('New Order from The Star Shop');
+      const body = encodeURIComponent(
+        `Customer: ${name}\nPhone: ${phone}\nEmail: ${email || 'N/A'}\n\nOrder Items:\n${itemList}\n\nTotal: ₹${total}\n\nNote: ${note || 'None'}`
+      );
+      window.open(`mailto:afrozask143@gmail.com?subject=${subject}&body=${body}`);
+      showToast('Opening email client as fallback...');
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Send Order via Email ✉️';
+  }
+
+  // Auto-slide carousel every 3s
+  let autoSlide = setInterval(() => {
+    const c = document.getElementById('carousel');
+    if (c.scrollLeft + c.clientWidth >= c.scrollWidth - 10) {
+      c.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      c.scrollBy({ left: 290, behavior: 'smooth' });
+    }
+  }, 3000);
+
+  document.getElementById('carousel').addEventListener('mouseenter', () => clearInterval(autoSlide));
+  document.getElementById('carousel').addEventListener('mouseleave', () => {
+    autoSlide = setInterval(() => {
+      const c = document.getElementById('carousel');
+      if (c.scrollLeft + c.clientWidth >= c.scrollWidth - 10) {
+        c.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        c.scrollBy({ left: 290, behavior: 'smooth' });
+      }
+    }, 3000);
+  });
+</script>
+</body>
+</html>
