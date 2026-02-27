@@ -1,1282 +1,1483 @@
 <!DOCTYPE html>
-<html lang="hi" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ═══ SEO META TAGS — VERY IMPORTANT FOR GOOGLE ═══ -->
-<title>Star Universe — Free Hindi Movies, Bollywood, Hollywood, South Hindi Dubbed</title>
-<meta name="description" content="Star Universe pe dekho free Hindi movies, Bollywood 2025, Hollywood Hindi dubbed, South Indian Hindi dubbed movies aur web series bilkul free!">
-<meta name="keywords" content="free hindi movies, bollywood movies online, hollywood hindi dubbed, south hindi dubbed, web series hindi, star universe">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Star Universe">
-<link rel="canonical" href="https://yourdomain.com/">
-
-<!-- Open Graph (Facebook/WhatsApp share) -->
-<meta property="og:title" content="Star Universe — Free Hindi Movies & Web Series">
-<meta property="og:description" content="Bollywood, Hollywood Hindi Dubbed, South Hindi Dubbed movies bilkul FREE!">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://yourdomain.com/">
-<meta property="og:image" content="https://yourdomain.com/og-image.jpg">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Star Universe — Free Hindi Movies">
-<meta name="twitter:description" content="Free Bollywood, Hollywood Hindi Dubbed movies online!">
-
-<!-- ═══ ADSTERRA ADS — REPLACE WITH YOUR CODES ═══ -->
-<!-- 
-  ADSTERRA SETUP:
-  1. adsterra.com pe account banao
-  2. Website add karo
-  3. Ad codes copy karo
-  4. Niche wali jagah paste karo
--->
-
-<!-- PropellerAds Push Notification — Paste your code here -->
-<!-- <script src="//yourcode.propellerads.com/script.js"></script> -->
-
-<!-- Adsterra Native Banner — Paste your code here -->
-<!-- <script async="async" data-cfasync="false" src="//youradsterra.com/invoke.js"></script> -->
-
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+<title>PDFMagic — Every PDF Tool You'll Ever Need</title>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
 <style>
-/* ══════════════════════════════════════════
-   CSS VARIABLES
-══════════════════════════════════════════ */
-:root {
-  --bg:      #05030e;
-  --bg2:     #0b0820;
-  --bg3:     #12102a;
-  --bg4:     #1a1635;
-  --glass:   rgba(255,255,255,0.035);
-  --glass2:  rgba(255,255,255,0.07);
-  --bdr:     rgba(255,255,255,0.065);
-  --bdrp:    rgba(139,92,246,0.4);
-  --p1:      #5b21b6;
-  --p2:      #7c3aed;
-  --p3:      #8b5cf6;
-  --p4:      #a78bfa;
-  --p5:      #e879f9;
-  --glow:    rgba(91,33,182,0.4);
-  --glow2:   rgba(139,92,246,0.15);
-  --gold:    #f59e0b;
-  --green:   #10b981;
-  --red:     #ef4444;
-  --t1:      #f8f5ff;
-  --t2:      #c4b8e0;
-  --t3:      #6b5d8a;
-  --nh:      64px;
-  --r:       12px;
-}
-[data-theme="light"] {
-  --bg:      #eee8ff;
-  --bg2:     #e5dcff;
-  --bg3:     #ddd3ff;
-  --bg4:     #d5c8ff;
-  --glass:   rgba(255,255,255,0.5);
-  --glass2:  rgba(255,255,255,0.72);
-  --bdr:     rgba(91,33,182,0.1);
-  --bdrp:    rgba(91,33,182,0.45);
-  --glow:    rgba(91,33,182,0.15);
-  --glow2:   rgba(139,92,246,0.08);
-  --t1:      #160430;
-  --t2:      #3d2470;
-  --t3:      #9580b8;
-}
+  :root {
+    --bg: #F5F3EF;
+    --bg2: #ECEAE4;
+    --bg3: #E2DED6;
+    --surface: #FFFFFF;
+    --surface2: #F9F8F6;
+    --border: rgba(0,0,0,0.08);
+    --text: #1A1814;
+    --text2: #5A5650;
+    --text3: #9A9590;
+    --accent: #E84B2A;
+    --accent2: #FF6B47;
+    --accent-bg: rgba(232,75,42,0.08);
+    --green: #2A9D5C;
+    --blue: #2A6BE8;
+    --purple: #7B4AE8;
+    --orange: #E8882A;
+    --shadow: 0 4px 24px rgba(0,0,0,0.06);
+    --shadow-lg: 0 16px 48px rgba(0,0,0,0.1);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  [data-theme="dark"] {
+    --bg: #0F0E0C;
+    --bg2: #161410;
+    --bg3: #1E1C18;
+    --surface: #1E1C18;
+    --surface2: #252320;
+    --border: rgba(255,255,255,0.08);
+    --text: #F0EDE8;
+    --text2: #A09D98;
+    --text3: #605D58;
+    --accent: #FF6B47;
+    --accent2: #FF8A6A;
+    --accent-bg: rgba(255,107,71,0.12);
+    --shadow: 0 4px 24px rgba(0,0,0,0.3);
+    --shadow-lg: 0 16px 48px rgba(0,0,0,0.4);
+  }
 
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Nunito',sans-serif;
-  background:var(--bg);color:var(--t1);
-  min-height:100vh;overflow-x:hidden;
-  transition:background .4s,color .4s;
-}
-body::before{
-  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse 80% 60% at 5% 0%,  rgba(91,33,182,.25) 0%,transparent 55%),
-    radial-gradient(ellipse 50% 40% at 95% 95%, rgba(139,92,246,.16) 0%,transparent 50%),
-    radial-gradient(ellipse 40% 30% at 55% 45%, rgba(232,121,249,.06) 0%,transparent 60%);
-}
-body::after{
-  content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.022;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-::-webkit-scrollbar{width:5px;height:3px}
-::-webkit-scrollbar-thumb{background:var(--p2);border-radius:3px}
-*{scrollbar-width:thin;scrollbar-color:var(--p2) transparent}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ══ NAVBAR ══ */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:600;
-  height:var(--nh);
-  background:rgba(5,3,14,.9);
-  backdrop-filter:blur(30px) saturate(180%);
-  border-bottom:1px solid var(--bdr);
-  display:flex;align-items:center;
-  padding:0 1.5rem;gap:1.25rem;
-}
-[data-theme="light"] nav{background:rgba(238,232,255,.92)}
+  html { scroll-behavior: smooth; }
 
-.nav-logo{
-  display:flex;align-items:center;gap:.5rem;
-  cursor:pointer;text-decoration:none;flex-shrink:0;
-  transition:transform .2s;
-}
-.nav-logo:hover{transform:scale(1.05)}
-.logo-icon{
-  width:36px;height:36px;border-radius:10px;
-  background:linear-gradient(135deg,var(--p2),var(--p5));
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.1rem;box-shadow:0 4px 16px var(--glow);
-  position:relative;overflow:hidden;
-}
-.logo-icon::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.2),transparent);border-radius:10px}
-.logo-txt{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:1.55rem;letter-spacing:.05em;
-  background:linear-gradient(130deg,var(--p4),var(--p5),#fff 80%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+  }
 
-.nav-links{display:flex;align-items:center;gap:.05rem;list-style:none;flex:1}
-.nav-links a{
-  padding:.42rem .8rem;border-radius:8px;
-  font-size:.8rem;font-weight:700;color:var(--t2);
-  text-decoration:none;white-space:nowrap;
-  border:1px solid transparent;transition:all .18s;cursor:pointer;
-}
-.nav-links a:hover{color:var(--t1);background:var(--glass2);border-color:var(--bdr)}
-.nav-links a.on{color:var(--p4);background:var(--glow2);border-color:var(--bdrp)}
+  /* ─── NAVBAR ─── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: var(--transition);
+  }
+  .nav-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--accent);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+  }
+  .logo-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--text);
+    letter-spacing: -0.5px;
+  }
+  .logo-text span { color: var(--accent); }
 
-.srch-bar{
-  display:flex;align-items:center;gap:.5rem;
-  background:var(--glass2);border:1px solid var(--bdr);
-  border-radius:10px;padding:.45rem .9rem;
-  cursor:pointer;min-width:190px;max-width:260px;flex:1;
-  transition:all .2s;
-}
-.srch-bar:hover{border-color:var(--p3);box-shadow:0 0 18px var(--glow2)}
-.srch-bar span{font-size:.75rem;color:var(--t3);flex:1}
-.srch-bar kbd{font-size:.62rem;color:var(--t3);background:var(--glass);border:1px solid var(--bdr);padding:2px 7px;border-radius:4px}
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text2);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: var(--transition);
+  }
+  .nav-links a:hover {
+    color: var(--text);
+    background: var(--bg2);
+  }
 
-.nav-r{display:flex;align-items:center;gap:.45rem}
-.ibtn{
-  width:36px;height:36px;border-radius:9px;
-  background:var(--glass2);border:1px solid var(--bdr);
-  display:flex;align-items:center;justify-content:center;
-  font-size:.95rem;color:var(--t2);cursor:pointer;transition:all .18s;
-}
-.ibtn:hover{background:var(--glow);color:var(--p4);border-color:var(--bdrp)}
-.tg-btn{
-  display:flex;align-items:center;gap:.35rem;
-  background:linear-gradient(135deg,#0088cc,#00aaff);
-  color:#fff;border:none;padding:.42rem .95rem;
-  border-radius:9px;font-size:.75rem;font-weight:800;
-  cursor:pointer;font-family:'Nunito',sans-serif;
-  box-shadow:0 3px 12px rgba(0,136,204,.4);transition:all .18s;
-}
-.tg-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,136,204,.5)}
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+  }
 
-/* ══ AD SLOTS ══ */
-.ad-banner{
-  background:var(--bg3);border:1px solid var(--bdr);
-  border-radius:var(--r);overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-  position:relative;
-}
-.ad-banner.top-leaderboard{
-  width:100%;height:90px;
-  margin:0 0 0;
-}
-.ad-banner.sidebar{width:300px;height:250px;flex-shrink:0}
-.ad-banner.in-feed{width:100%;height:250px;margin:1.5rem 0}
-.ad-banner.sticky-bottom{
-  position:fixed;bottom:0;left:0;right:0;z-index:700;
-  height:60px;border-radius:0;border:none;
-  border-top:1px solid var(--bdr);
-  background:rgba(5,3,14,.97);
-  padding:0 1.5rem;
-  display:flex;align-items:center;justify-content:center;
-  gap:1rem;
-}
-.ad-label{
-  position:absolute;top:4px;right:6px;
-  font-size:.55rem;color:var(--t3);font-weight:600;text-transform:uppercase;letter-spacing:.08em;
-}
-.ad-placeholder{
-  text-align:center;color:var(--t3);
-  font-size:.75rem;font-weight:600;
-}
-.ad-placeholder .aico{font-size:1.5rem;display:block;margin-bottom:.25rem;opacity:.5}
-.ad-close{
-  position:absolute;top:4px;right:4px;
-  width:18px;height:18px;border-radius:50%;
-  background:rgba(255,255,255,.08);border:none;
-  color:var(--t3);font-size:.6rem;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-}
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    transition: var(--transition);
+    color: var(--text);
+  }
+  .theme-toggle:hover {
+    background: var(--bg2);
+    transform: scale(1.05);
+  }
 
-/* TOP LEADERBOARD AD */
-.top-ad-wrap{
-  background:var(--bg2);border-bottom:1px solid var(--bdr);
-  padding:.5rem 1.5rem;
-  display:flex;align-items:center;justify-content:center;
-}
+  .btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text2);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: var(--bg2);
+    color: var(--text);
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 4px 16px rgba(232,75,42,0.3);
+  }
+  .btn-primary:hover {
+    background: var(--accent2);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(232,75,42,0.4);
+  }
 
-/* ══ SEARCH OVERLAY ══ */
-#srchOv{
-  position:fixed;inset:0;z-index:800;
-  background:rgba(5,3,14,.96);backdrop-filter:blur(24px);
-  display:flex;flex-direction:column;align-items:center;
-  padding:5rem 1.5rem 2rem;
-  opacity:0;pointer-events:none;transition:opacity .25s;
-}
-#srchOv.on{opacity:1;pointer-events:all}
-.si-wrap{width:100%;max-width:620px;position:relative;margin-bottom:1.2rem}
-.si-wrap input{
-  width:100%;padding:1rem 1rem 1rem 3.3rem;
-  background:var(--bg2);border:2px solid var(--p3);
-  border-radius:14px;color:var(--t1);font-size:1rem;
-  font-family:'Nunito',sans-serif;outline:none;
-  box-shadow:0 0 36px var(--glow);
-}
-.si-wrap input::placeholder{color:var(--t3)}
-.si-ico{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--p4);font-size:1.1rem}
-.si-x{position:absolute;right:.9rem;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--t3);cursor:pointer;font-size:1rem;transition:color .2s}
-.si-x:hover{color:var(--t1)}
-#srchList{width:100%;max-width:620px;max-height:55vh;overflow-y:auto}
-.si-item{
-  display:flex;align-items:center;gap:.9rem;
-  padding:.65rem .9rem;border-radius:11px;cursor:pointer;
-  border:1px solid transparent;transition:all .15s;
-  animation:fadeUp .2s ease both;
-}
-.si-item:hover{background:var(--glass2);border-color:var(--bdr)}
-.si-thumb{width:80px;height:45px;object-fit:cover;border-radius:7px;flex-shrink:0;background:var(--bg3)}
-.si-info .t{font-size:.85rem;font-weight:700}
-.si-info .m{font-size:.7rem;color:var(--t3);margin-top:.12rem}
-.si-empty{text-align:center;color:var(--t3);padding:2.5rem;font-size:.88rem}
+  /* ─── HERO ─── */
+  .hero {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 32px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-bg);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    border: 1px solid rgba(232,75,42,0.2);
+    animation: fadeInUp 0.6s ease both;
+  }
+  .hero-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
 
-/* ══ PLAYER ══ */
-#playerOv{
-  position:fixed;inset:0;z-index:900;background:#000;
-  display:flex;flex-direction:column;
-  opacity:0;pointer-events:none;transition:opacity .3s;
-}
-#playerOv.on{opacity:1;pointer-events:all}
-.ph{
-  display:flex;align-items:center;gap:.75rem;
-  padding:.6rem 1.2rem;background:rgba(0,0,0,.92);
-  border-bottom:1px solid rgba(255,255,255,.07);flex-shrink:0;
-}
-.ph .pt{font-weight:800;font-size:.88rem;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ph .pc{
-  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
-  color:#fff;padding:.32rem .85rem;border-radius:7px;
-  cursor:pointer;font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:700;
-  transition:all .15s;flex-shrink:0;
-}
-.ph .pc:hover{background:var(--red);border-color:var(--red)}
-.pbody{flex:1;position:relative}
-#ytF{width:100%;height:100%;border:none}
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.6s 0.1s ease both;
+  }
+  .hero h1 .highlight {
+    color: var(--accent);
+    position: relative;
+  }
+  .hero p {
+    font-size: 17px;
+    color: var(--text2);
+    line-height: 1.6;
+    margin-bottom: 36px;
+    animation: fadeInUp 0.6s 0.2s ease both;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.6s 0.3s ease both;
+  }
+  .btn-large {
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
 
-/* ── In-player ad slot ── */
-.player-ad{
-  background:rgba(0,0,0,.85);border-top:1px solid rgba(255,255,255,.07);
-  padding:.45rem 1.2rem;display:flex;align-items:center;justify-content:center;
-  gap:1rem;min-height:56px;flex-shrink:0;
-}
-.pf{
-  background:rgba(0,0,0,.85);border-top:1px solid rgba(255,255,255,.07);
-  padding:.45rem 1.2rem;display:flex;align-items:center;gap:.5rem;
-  flex-wrap:wrap;flex-shrink:0;
-}
-.pf label{font-size:.7rem;color:rgba(255,255,255,.35);flex-shrink:0}
-.pqb{
-  padding:.25rem .65rem;border-radius:6px;
-  border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.06);
-  color:rgba(255,255,255,.65);font-size:.7rem;font-weight:700;
-  cursor:pointer;font-family:'Nunito',sans-serif;transition:all .12s;
-}
-.pqb:hover,.pqb.on{background:var(--p2);border-color:var(--p2);color:#fff}
-.yt-ext{
-  margin-left:auto;display:flex;align-items:center;gap:.35rem;
-  background:#ff0000;color:#fff;border:none;
-  padding:.3rem .85rem;border-radius:7px;
-  font-size:.72rem;font-weight:800;cursor:pointer;
-  font-family:'Nunito',sans-serif;transition:all .15s;flex-shrink:0;
-}
-.yt-ext:hover{background:#cc0000}
+  .hero-stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+    animation: fadeInUp 0.6s 0.4s ease both;
+  }
+  .stat-item h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text);
+  }
+  .stat-item p {
+    font-size: 13px;
+    color: var(--text3);
+    margin: 0;
+  }
 
-/* ══ DETAIL ══ */
-#detOv{
-  position:fixed;inset:0;z-index:700;
-  background:rgba(5,3,14,.92);backdrop-filter:blur(20px);
-  display:flex;align-items:flex-start;justify-content:center;
-  padding:calc(var(--nh) + .75rem) 1rem 2rem;
-  overflow-y:auto;
-  opacity:0;pointer-events:none;transition:opacity .28s;
-}
-#detOv.on{opacity:1;pointer-events:all}
-.det{
-  background:var(--bg2);border:1px solid var(--bdr);
-  border-radius:20px;width:100%;max-width:820px;
-  overflow:hidden;position:relative;
-  transform:translateY(18px);transition:transform .35s cubic-bezier(.34,1.56,.64,1);
-}
-#detOv.on .det{transform:translateY(0)}
-.det-bd{height:280px;position:relative;overflow:hidden;background:var(--bg3)}
-.det-bd img{width:100%;height:100%;object-fit:cover;filter:brightness(.5)}
-.det-bov{
-  position:absolute;inset:0;
-  background:linear-gradient(0deg,var(--bg2) 0%,transparent 55%),
-             linear-gradient(90deg,rgba(5,3,14,.88) 0%,transparent 55%);
-}
-.det-x{
-  position:absolute;top:.8rem;right:.8rem;z-index:5;
-  width:34px;height:34px;border-radius:50%;
-  background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.14);
-  color:#fff;font-size:.85rem;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;transition:all .15s;
-}
-.det-x:hover{background:var(--red);border-color:var(--red)}
-.det-body{
-  display:grid;grid-template-columns:200px 1fr;
-  gap:1.25rem;padding:1rem 1.75rem 1.75rem;
-  margin-top:-80px;position:relative;z-index:2;
-}
-.det-poster{
-  border-radius:12px;overflow:hidden;
-  box-shadow:0 14px 44px rgba(0,0,0,.8);
-  background:var(--bg3);border:2px solid var(--bdr);
-}
-.det-poster img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
-.det-info{}
-.det-ch{font-size:.7rem;color:var(--t3);margin-bottom:.35rem;font-weight:700;display:flex;align-items:center;gap:.4rem}
-.det-ch span{background:var(--glass2);border:1px solid var(--bdr);padding:.12rem .5rem;border-radius:4px;font-size:.65rem;text-transform:uppercase;letter-spacing:.06em}
-.det-title{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.04em;line-height:1.15;margin-bottom:.45rem}
-.det-meta{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;font-size:.75rem;color:var(--t2);margin-bottom:.7rem}
-.det-meta .free{color:var(--green);font-weight:800}
-.det-desc{color:var(--t2);font-size:.8rem;line-height:1.7;margin-bottom:1rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.det-btns{display:flex;gap:.5rem;flex-wrap:wrap}
+  .hero-visual {
+    position: relative;
+    animation: fadeInRight 0.8s 0.2s ease both;
+  }
+  .hero-card-main {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-card-main::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(232,75,42,0.1), transparent 70%);
+    pointer-events: none;
+  }
+  .upload-area {
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .upload-area:hover {
+    border-color: var(--accent);
+    background: var(--accent-bg);
+  }
+  .upload-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--accent-bg);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 24px;
+    transition: var(--transition);
+  }
+  .upload-area:hover .upload-icon {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  .upload-area h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .upload-area p { font-size: 13px; color: var(--text3); margin: 0; }
 
-/* ── Detail ad ── */
-.det-ad{
-  margin:1rem 1.75rem 1.75rem;
-  background:var(--bg3);border:1px solid var(--bdr);
-  border-radius:10px;height:90px;
-  display:flex;align-items:center;justify-content:center;
-  position:relative;
-}
+  .floating-badge {
+    position: absolute;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  .floating-badge-1 {
+    top: -20px;
+    right: 20px;
+    animation-delay: 0s;
+  }
+  .floating-badge-2 {
+    bottom: -10px;
+    left: -10px;
+    animation-delay: 1.5s;
+  }
 
-/* ══ BUTTONS ══ */
-.btn-w{
-  display:flex;align-items:center;gap:.4rem;
-  background:linear-gradient(135deg,var(--p2),var(--p5));
-  color:#fff;border:none;padding:.68rem 1.5rem;border-radius:10px;
-  font-size:.82rem;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;
-  box-shadow:0 4px 16px var(--glow);transition:all .2s;
-}
-.btn-w:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(91,33,182,.6)}
-.btn-yt{
-  display:flex;align-items:center;gap:.4rem;
-  background:rgba(255,0,0,.15);border:1px solid rgba(255,0,0,.3);
-  color:#ff6b6b;padding:.68rem 1.1rem;border-radius:10px;
-  font-size:.82rem;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;
-  transition:all .2s;
-}
-.btn-yt:hover{background:rgba(255,0,0,.25)}
-.btn-g{
-  display:flex;align-items:center;gap:.4rem;
-  background:var(--glass2);border:1px solid var(--bdr);
-  color:var(--t1);padding:.68rem 1rem;border-radius:10px;
-  font-size:.82rem;font-weight:600;cursor:pointer;font-family:'Nunito',sans-serif;
-  transition:all .2s;
-}
-.btn-g:hover{border-color:var(--bdrp);background:var(--glow2)}
+  /* ─── SEARCH BAR ─── */
+  .search-section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px 48px;
+  }
+  .search-bar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 6px 6px 6px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+  .search-bar:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-bg), var(--shadow);
+  }
+  .search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    outline: none;
+  }
+  .search-bar input::placeholder { color: var(--text3); }
 
-/* ══ HERO ══ */
-.hero{
-  position:relative;height:550px;overflow:hidden;
-  margin-top:var(--nh);
-}
-.h-bg{position:absolute;inset:0;background-size:cover;background-position:center 20%;transition:all .9s ease}
-.h-ov{
-  position:absolute;inset:0;
-  background:
-    linear-gradient(90deg,rgba(5,3,14,.97) 0%,rgba(5,3,14,.72) 42%,rgba(5,3,14,.12) 100%),
-    linear-gradient(0deg,rgba(5,3,14,.95) 0%,transparent 45%);
-}
-[data-theme="light"] .h-ov{
-  background:
-    linear-gradient(90deg,rgba(238,232,255,.97) 0%,rgba(238,232,255,.72) 42%,rgba(238,232,255,.1) 100%),
-    linear-gradient(0deg,rgba(238,232,255,.9) 0%,transparent 45%);
-}
-.h-con{
-  position:relative;z-index:2;
-  display:flex;flex-direction:column;justify-content:flex-end;
-  height:100%;padding:2.5rem 2.5rem 3rem;max-width:580px;
-}
-.h-badge{
-  display:inline-flex;align-items:center;gap:.35rem;
-  background:linear-gradient(135deg,var(--p2),var(--p5));
-  color:#fff;font-size:.65rem;font-weight:900;
-  padding:.25rem .65rem;border-radius:20px;
-  text-transform:uppercase;letter-spacing:.12em;
-  margin-bottom:.7rem;width:fit-content;
-  animation:popIn .4s both;
-}
-.h-title{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:3.4rem;letter-spacing:.04em;line-height:1.05;
-  margin-bottom:.5rem;
-  animation:slideUp .5s ease .1s both;
-}
-.h-ch{font-size:.78rem;color:var(--p4);font-weight:700;margin-bottom:.35rem;animation:slideUp .5s ease .15s both}
-.h-meta{display:flex;align-items:center;gap:.7rem;font-size:.78rem;color:var(--t2);margin-bottom:.7rem;animation:slideUp .5s ease .2s both}
-.h-meta .vw{color:var(--green)}
-.h-desc{font-size:.85rem;color:var(--t2);line-height:1.6;margin-bottom:1.3rem;max-width:430px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;animation:slideUp .5s ease .3s both}
-.h-btns{display:flex;gap:.55rem;animation:slideUp .5s ease .4s both}
-.h-dots{position:absolute;bottom:1.25rem;right:2.5rem;z-index:3;display:flex;gap:.3rem}
-.hdot{width:20px;height:3px;border-radius:2px;background:rgba(255,255,255,.15);cursor:pointer;transition:all .3s}
-.hdot.on{background:var(--p4);width:38px}
+  /* ─── CATEGORIES ─── */
+  .categories {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px 24px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .categories::-webkit-scrollbar { display: none; }
+  .cat-pill {
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text2);
+  }
+  .cat-pill:hover, .cat-pill.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: scale(1.02);
+  }
 
-@keyframes popIn{from{scale:.6;opacity:0}to{scale:1;opacity:1}}
-@keyframes slideUp{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
-@keyframes fadeUp{from{transform:translateY(5px);opacity:0}to{transform:none;opacity:1}}
+  /* ─── TOOLS GRID ─── */
+  .tools-section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 8px 32px 80px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
 
-/* ══ CAT BAR ══ */
-.cat-bar{
-  display:flex;gap:.38rem;padding:1.2rem 1.5rem .3rem;
-  overflow-x:auto;scrollbar-width:none;z-index:1;position:relative;
-}
-.cat-bar::-webkit-scrollbar{display:none}
-.ctab{
-  display:flex;align-items:center;gap:.3rem;flex-shrink:0;
-  padding:.38rem .9rem;border-radius:20px;
-  border:1px solid var(--bdr);background:var(--glass);
-  color:var(--t2);font-size:.75rem;font-weight:700;
-  cursor:pointer;transition:all .18s;white-space:nowrap;
-}
-.ctab:hover{color:var(--t1);background:var(--glass2)}
-.ctab.on{background:linear-gradient(135deg,var(--p2),var(--p5));color:#fff;border-color:transparent;box-shadow:0 3px 12px var(--glow)}
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
 
-/* ══ CHANNEL ROW ══ */
-.ch-row{display:flex;gap:.6rem;padding:.8rem 1.5rem .5rem;overflow-x:auto;scrollbar-width:none}
-.ch-row::-webkit-scrollbar{display:none}
-.chp{
-  display:flex;align-items:center;gap:.35rem;flex-shrink:0;
-  padding:.32rem .8rem;border-radius:20px;
-  background:var(--glass2);border:1px solid var(--bdr);
-  font-size:.72rem;font-weight:700;cursor:pointer;
-  color:var(--t2);transition:all .18s;
-}
-.chp:hover,.chp.on{background:var(--glow2);border-color:var(--bdrp);color:var(--p4)}
+  .tool-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    group: true;
+  }
+  .tool-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--tool-color, #E84B2A) 0%, transparent 60%);
+    opacity: 0;
+    transition: var(--transition);
+    pointer-events: none;
+  }
+  .tool-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--tool-color, var(--accent));
+  }
+  .tool-card:hover::after { opacity: 0.05; }
 
-/* ══ SECTIONS ══ */
-.sec{padding:1.6rem 1.5rem 0;position:relative;z-index:1}
-.sec-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
-.sec-ttl{
-  font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.05em;
-  display:flex;align-items:center;gap:.5rem;
-}
-.sec-ttl::before{content:'';display:block;width:3px;height:20px;border-radius:2px;background:linear-gradient(180deg,var(--p3),var(--p5))}
-.see-all{
-  font-size:.72rem;color:var(--p4);font-weight:800;cursor:pointer;
-  padding:.28rem .65rem;border-radius:7px;background:var(--glow2);border:1px solid var(--bdrp);
-  transition:all .18s;text-decoration:none;
-}
-.see-all:hover{background:var(--p2);color:#fff;border-color:var(--p2)}
+  .tool-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+    transition: var(--transition);
+    background: var(--tool-bg, var(--accent-bg));
+  }
+  .tool-card:hover .tool-icon {
+    transform: scale(1.1) rotate(-5deg);
+  }
 
-/* ══ CARD ROW ══ */
-.row-w{position:relative}
-.card-row{
-  display:flex;gap:.85rem;overflow-x:auto;
-  padding-bottom:.5rem;scrollbar-width:thin;scrollbar-color:var(--p2) transparent;
-}
-.card-row::-webkit-scrollbar{height:3px}
-.card-row .vc{flex:0 0 200px}
-.arr{
-  position:absolute;top:36%;transform:translateY(-50%);
-  z-index:10;width:34px;height:34px;border-radius:50%;
-  background:var(--bg2);border:1px solid var(--bdr);
-  cursor:pointer;display:flex;align-items:center;justify-content:center;
-  color:var(--t1);font-size:.78rem;transition:all .18s;
-  box-shadow:0 4px 20px rgba(0,0,0,.6);
-}
-.arr:hover{background:var(--p2);border-color:var(--p2)}
-.arr.l{left:-16px}.arr.r{right:-16px}
+  .tool-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .tool-desc {
+    font-size: 13px;
+    color: var(--text3);
+    line-height: 1.5;
+  }
 
-/* ══ VIDEO CARD ══ */
-.vc{
-  border-radius:var(--r);overflow:hidden;
-  background:var(--bg3);border:1px solid var(--bdr);
-  cursor:pointer;transition:all .28s cubic-bezier(.34,1.56,.64,1);
-  position:relative;
-}
-.vc:hover{
-  transform:translateY(-10px) scale(1.03);
-  box-shadow:0 0 40px rgba(91,33,182,.38),0 12px 40px rgba(0,0,0,.7);
-  border-color:var(--bdrp);z-index:10;
-}
-.vc-thumb{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--p1),#0d0520)}
-.vc-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s;display:block}
-.vc:hover .vc-thumb img{transform:scale(1.08)}
-.vc-thumb .noth{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:2rem;color:rgba(255,255,255,.1)}
-.vhd{position:absolute;top:.4rem;left:.4rem;background:linear-gradient(135deg,var(--p2),var(--p5));color:#fff;font-size:.56rem;font-weight:900;padding:.14rem .42rem;border-radius:4px;text-transform:uppercase;letter-spacing:.08em}
-.vdur{position:absolute;bottom:.35rem;right:.35rem;background:rgba(0,0,0,.85);color:#fff;font-size:.62rem;font-weight:700;padding:.14rem .42rem;border-radius:4px}
-.vnew{position:absolute;top:.4rem;right:.4rem;background:linear-gradient(135deg,#059669,#10b981);color:#fff;font-size:.56rem;font-weight:900;padding:.14rem .42rem;border-radius:4px}
-.vov{
-  position:absolute;inset:0;
-  background:linear-gradient(0deg,rgba(5,3,14,.9) 0%,rgba(91,33,182,.2) 55%,transparent 100%);
-  opacity:0;transition:opacity .22s;
-  display:flex;align-items:center;justify-content:center;
-}
-.vc:hover .vov{opacity:1}
-.pring{
-  width:48px;height:48px;border-radius:50%;
-  background:linear-gradient(135deg,var(--p3),var(--p5));
-  display:flex;align-items:center;justify-content:center;
-  font-size:1rem;color:#fff;
-  transform:scale(.7);transition:transform .3s cubic-bezier(.34,1.56,.64,1);
-  box-shadow:0 4px 18px var(--glow);
-}
-.vc:hover .pring{transform:scale(1)}
-.vc-info{padding:.58rem .65rem .68rem}
-.vc-ttl{font-size:.8rem;font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.38;margin-bottom:.28rem}
-.vc-meta{display:flex;align-items:center;justify-content:space-between;font-size:.66rem;color:var(--t3)}
-.vc-ch{font-weight:700;color:var(--p4);font-size:.68rem}
+  .tool-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: var(--accent);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
 
-/* ══ SKELETON ══ */
-.skel{background:linear-gradient(90deg,var(--glass) 25%,var(--glass2) 50%,var(--glass) 75%);background-size:400% 100%;animation:sk 1.5s infinite}
-@keyframes sk{0%{background-position:100%}100%{background-position:-100%}}
-.sk-c{flex:0 0 200px;border-radius:var(--r);overflow:hidden;background:var(--bg3);border:1px solid var(--bdr)}
-.sk-t{width:100%;aspect-ratio:16/9}
-.sk-l{height:11px;margin:.58rem .65rem .28rem;border-radius:5px}
-.sk-l2{height:9px;width:55%;margin:.28rem .65rem .65rem;border-radius:5px}
+  /* ─── FEATURES ─── */
+  .features-section {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 80px 32px;
+  }
+  .features-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .features-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .features-header h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .features-header p {
+    font-size: 16px;
+    color: var(--text2);
+    max-width: 560px;
+    margin: 0 auto;
+  }
 
-/* ══ IN-FEED AD ══ */
-.feed-ad{
-  flex:0 0 200px;border-radius:var(--r);overflow:hidden;
-  background:var(--bg4);border:1px solid var(--bdrp);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:.4rem;padding:.75rem;text-align:center;
-  position:relative;cursor:pointer;
-}
-.feed-ad .a-label{font-size:.55rem;color:var(--t3);position:absolute;top:4px;right:6px;text-transform:uppercase;letter-spacing:.06em}
-.feed-ad .a-ico{font-size:1.75rem;opacity:.6}
-.feed-ad .a-txt{font-size:.7rem;color:var(--t3);font-weight:600}
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    transition: var(--transition);
+  }
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .feature-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .feature-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .feature-card p {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.6;
+  }
 
-/* ══ TOAST ══ */
-#toast{
-  position:fixed;bottom:calc(60px + 1rem);right:1.5rem;z-index:9999;
-  background:linear-gradient(135deg,var(--p2),var(--p5));
-  color:#fff;padding:.6rem 1.1rem;border-radius:11px;
-  font-size:.78rem;font-weight:700;
-  box-shadow:0 8px 24px var(--glow);
-  transform:translateY(60px);opacity:0;
-  transition:all .3s cubic-bezier(.34,1.56,.64,1);
-  pointer-events:none;display:flex;align-items:center;gap:.4rem;
-}
-#toast.on{transform:translateY(0);opacity:1}
+  /* ─── HOW IT WORKS ─── */
+  .how-section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .how-content h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .how-content > p {
+    color: var(--text2);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  .steps { display: flex; flex-direction: column; gap: 24px; }
+  .step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 14px;
+    transition: var(--transition);
+    cursor: default;
+    border: 1px solid transparent;
+  }
+  .step:hover {
+    background: var(--surface);
+    border-color: var(--border);
+  }
+  .step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .step h4 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .step p { font-size: 13px; color: var(--text2); line-height: 1.5; }
 
-/* ══ EARNING DASHBOARD (admin ke liye) ══ */
-#earnDash{
-  position:fixed;bottom:70px;left:1rem;z-index:600;
-  background:var(--bg2);border:1px solid var(--bdrp);
-  border-radius:14px;padding:1rem 1.25rem;
-  box-shadow:0 8px 30px var(--glow);
-  min-width:220px;font-size:.78rem;
-  transform:translateY(20px);opacity:0;
-  transition:all .3s;pointer-events:none;
-}
-#earnDash.on{transform:translateY(0);opacity:1;pointer-events:all}
-.ed-ttl{font-weight:900;font-size:.85rem;margin-bottom:.75rem;color:var(--p4)}
-.ed-row{display:flex;justify-content:space-between;margin-bottom:.4rem}
-.ed-row .lbl{color:var(--t3)}
-.ed-row .val{font-weight:800;color:var(--green)}
-.ed-divider{height:1px;background:var(--bdr);margin:.6rem 0}
+  .how-visual {
+    position: relative;
+  }
+  .pdf-mockup {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: var(--shadow-lg);
+  }
+  .pdf-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .pdf-file-icon {
+    width: 40px;
+    height: 48px;
+    background: var(--accent);
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 4px;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    position: relative;
+  }
+  .pdf-file-icon::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 12px; height: 12px;
+    background: rgba(255,255,255,0.3);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+  }
+  .pdf-progress-bar {
+    height: 6px;
+    background: var(--bg2);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .pdf-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border-radius: 100px;
+    width: 75%;
+    animation: progressAnim 2s ease-in-out infinite alternate;
+  }
+  @keyframes progressAnim {
+    from { width: 60%; }
+    to { width: 90%; }
+  }
+  .pdf-lines { display: flex; flex-direction: column; gap: 8px; }
+  .pdf-line {
+    height: 10px;
+    background: var(--bg2);
+    border-radius: 100px;
+  }
 
-/* ══ FOOTER ══ */
-footer{
-  background:var(--bg2);border-top:1px solid var(--bdr);
-  padding:2.5rem 1.5rem 5rem;margin-top:3rem;position:relative;z-index:1;
-}
-.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:1.75rem;margin-bottom:1.75rem}
-.ft-logo{display:flex;align-items:center;gap:.45rem;margin-bottom:.5rem}
-.ft-desc{font-size:.77rem;color:var(--t3);line-height:1.6;max-width:230px}
-.ft-notice{margin-top:.8rem;padding:.55rem .85rem;background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.16);border-radius:8px;font-size:.68rem;color:var(--t3);line-height:1.5}
-.ft-col h4{font-size:.67rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);margin-bottom:.5rem}
-.ft-links{list-style:none;display:flex;flex-direction:column;gap:.3rem}
-.ft-links a{font-size:.76rem;color:var(--t2);text-decoration:none;cursor:pointer;transition:color .15s}
-.ft-links a:hover{color:var(--p4)}
-.ft-btm{display:flex;justify-content:space-between;align-items:center;padding-top:1.2rem;border-top:1px solid var(--bdr);font-size:.7rem;color:var(--t3);flex-wrap:wrap;gap:.4rem}
+  /* ─── TESTIMONIALS ─── */
+  .testimonials {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 80px 32px;
+  }
+  .testimonials-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .testimonials h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 48px;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .testimonial-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    transition: var(--transition);
+  }
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .stars { color: #F5A623; font-size: 16px; margin-bottom: 16px; letter-spacing: 2px; }
+  .testimonial-text {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--accent);
+    border: 2px solid var(--accent-bg);
+  }
+  .author-name { font-weight: 600; font-size: 14px; }
+  .author-role { font-size: 12px; color: var(--text3); }
 
-/* ══ STICKY BOTTOM AD ══ */
-.sticky-ad-bar{
-  position:fixed;bottom:0;left:0;right:0;z-index:700;
-  background:rgba(5,3,14,.97);border-top:1px solid var(--bdr);
-  height:58px;display:flex;align-items:center;
-  justify-content:center;padding:0 1rem;gap:1rem;
-}
-[data-theme="light"] .sticky-ad-bar{background:rgba(238,232,255,.97)}
-.sticky-ad-bar .close-sticky{
-  position:absolute;right:.75rem;top:50%;transform:translateY(-50%);
-  width:24px;height:24px;border-radius:50%;
-  background:var(--glass2);border:1px solid var(--bdr);
-  color:var(--t3);font-size:.65rem;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;transition:all .15s;
-}
-.sticky-ad-bar .close-sticky:hover{background:var(--red);color:#fff}
-.sticky-ad-content{
-  display:flex;align-items:center;gap:.75rem;
-}
-.sticky-ad-label{font-size:.6rem;color:var(--t3);text-transform:uppercase;letter-spacing:.08em}
+  /* ─── CTA SECTION ─── */
+  .cta-section {
+    max-width: 1280px;
+    margin: 80px auto;
+    padding: 0 32px;
+  }
+  .cta-card {
+    background: linear-gradient(135deg, var(--accent) 0%, #C73A20 100%);
+    border-radius: 24px;
+    padding: 64px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cta-card::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cta-card h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-card p {
+    font-size: 17px;
+    opacity: 0.85;
+    margin-bottom: 36px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-btns { display: flex; gap: 12px; justify-content: center; position: relative; z-index: 1; }
+  .btn-white {
+    background: white;
+    color: var(--accent);
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 12px;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+  .btn-outline-white {
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.4);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .btn-outline-white:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: white;
+  }
 
-/* ══ MOBILE ══ */
-.mob-bar{
-  position:fixed;bottom:58px;left:0;right:0;z-index:600;
-  background:rgba(5,3,14,.94);backdrop-filter:blur(20px);
-  border-top:1px solid var(--bdr);
-  display:none;justify-content:space-around;
-  padding:.4rem 0;
-}
-[data-theme="light"] .mob-bar{background:rgba(238,232,255,.94)}
-.mb{
-  display:flex;flex-direction:column;align-items:center;gap:.15rem;
-  background:none;border:none;color:var(--t3);
-  font-size:.57rem;font-family:'Nunito',sans-serif;font-weight:700;
-  cursor:pointer;padding:.28rem .55rem;transition:color .15s;
-}
-.mb .i{font-size:1.15rem}
-.mb.on,.mb:hover{color:var(--p4)}
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 60px 32px 32px;
+  }
+  .footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+  .footer-brand p {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.6;
+    margin-top: 16px;
+    max-width: 280px;
+  }
+  .footer-col h4 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul a {
+    text-decoration: none;
+    color: var(--text2);
+    font-size: 14px;
+    transition: var(--transition);
+  }
+  .footer-col ul a:hover { color: var(--accent); }
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .footer-bottom p { font-size: 13px; color: var(--text3); }
+  .footer-social { display: flex; gap: 8px; }
+  .social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--text2);
+  }
+  .social-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
 
-/* ══ API MODAL ══ */
-#apiM{
-  position:fixed;inset:0;z-index:9000;
-  background:rgba(5,3,14,.98);backdrop-filter:blur(24px);
-  display:flex;align-items:center;justify-content:center;padding:1.5rem;
-  opacity:0;pointer-events:none;transition:opacity .3s;
-}
-#apiM.on{opacity:1;pointer-events:all}
-.api-box{
-  background:var(--bg2);border:1px solid var(--bdrp);
-  border-radius:22px;width:100%;max-width:500px;padding:2.5rem 2.25rem;text-align:center;
-  box-shadow:0 0 70px rgba(91,33,182,.35);
-  animation:popIn .45s cubic-bezier(.34,1.56,.64,1) both;
-}
-.api-box .emo{font-size:3rem;margin-bottom:.75rem;display:block}
-.api-box h2{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.05em;margin-bottom:.45rem;background:linear-gradient(135deg,var(--p4),var(--p5));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.api-box p{color:var(--t2);font-size:.82rem;line-height:1.7;margin-bottom:1.4rem}
-.api-box a{color:var(--p4);text-decoration:none;font-weight:800}
-.api-inp{width:100%;padding:.82rem .95rem;background:var(--bg3);border:2px solid var(--bdr);border-radius:11px;color:var(--t1);font-size:.88rem;font-family:'Nunito',sans-serif;outline:none;transition:all .22s;margin-bottom:.8rem}
-.api-inp:focus{border-color:var(--p3);box-shadow:0 0 20px var(--glow)}
-.api-inp::placeholder{color:var(--t3)}
-.api-go{width:100%;padding:.85rem;background:linear-gradient(135deg,var(--p2),var(--p5));color:#fff;border:none;border-radius:11px;font-size:.9rem;font-weight:900;cursor:pointer;font-family:'Nunito',sans-serif;box-shadow:0 4px 20px var(--glow);transition:all .2s;letter-spacing:.03em}
-.api-go:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(91,33,182,.6)}
-.api-demo{margin-top:.7rem;display:block;font-size:.74rem;color:var(--t3);cursor:pointer;background:none;border:none;font-family:'Nunito',sans-serif;transition:color .18s}
-.api-demo:hover{color:var(--p4)}
-.steps{text-align:left;margin-top:1.4rem;background:var(--bg3);border-radius:11px;padding:.9rem 1.1rem;border:1px solid var(--bdr)}
-.steps h4{font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);margin-bottom:.55rem}
-.steps ol{padding-left:1.15rem;color:var(--t2);font-size:.77rem;line-height:2.1}
+  /* ─── MODAL ─── */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px;
+    width: 90%;
+    max-width: 480px;
+    transform: scale(0.95) translateY(20px);
+    transition: transform 0.3s ease;
+  }
+  .modal-overlay.active .modal {
+    transform: scale(1) translateY(0);
+  }
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .modal-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .modal-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text2);
+    display: grid;
+    place-items: center;
+    transition: var(--transition);
+  }
+  .modal-close:hover { background: var(--bg2); }
+  .modal-upload-zone {
+    border: 2px dashed var(--border);
+    border-radius: 14px;
+    padding: 48px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-bottom: 20px;
+  }
+  .modal-upload-zone:hover {
+    border-color: var(--accent);
+    background: var(--accent-bg);
+  }
+  .modal-upload-zone .emoji { font-size: 40px; margin-bottom: 12px; display: block; }
+  .modal-upload-zone h3 { font-family: 'Syne', sans-serif; font-size: 16px; margin-bottom: 8px; }
+  .modal-upload-zone p { font-size: 13px; color: var(--text3); }
+  .modal-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .modal-btn:hover { background: var(--accent2); transform: translateY(-1px); }
 
-@media(max-width:768px){
-  .mob-bar{display:flex}
-  body{padding-bottom:calc(58px + 52px)}
-  .hero{height:400px}
-  .h-con{padding:1.5rem 1.25rem 2.5rem}
-  .h-title{font-size:2.4rem}
-  .sec{padding:1.4rem 1rem 0}
-  .cat-bar{padding:.9rem 1rem .2rem}
-  .ch-row{padding:.6rem 1rem .4rem}
-  .ft-grid{grid-template-columns:1fr 1fr}
-  .det-body{grid-template-columns:1fr}
-  .det-poster{width:160px;margin:0 auto}
-  .nav-links,.srch-bar{display:none}
-}
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 100px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+
+  /* ─── TRUST BAR ─── */
+  .trust-bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 32px;
+  }
+  .trust-bar-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text2);
+  }
+  .trust-item span { font-size: 16px; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; gap: 40px; }
+    .hero-visual { display: none; }
+    .features-grid { grid-template-columns: 1fr; }
+    .how-section { grid-template-columns: 1fr; gap: 40px; }
+    .how-visual { display: none; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 600px) {
+    .hero { padding: 40px 20px 40px; }
+    .tools-section { padding: 8px 20px 60px; }
+    .cta-card { padding: 40px 24px; }
+    .cta-btns { flex-direction: column; align-items: center; }
+    .footer-inner { grid-template-columns: 1fr; }
+    nav .nav-inner { padding: 0 20px; }
+  }
 </style>
 </head>
 <body>
 
-<!-- ════ API MODAL ════ -->
-<div id="apiM" class="on">
-  <div class="api-box">
-    <span class="emo">⭐</span>
-    <h2>Star Universe Setup</h2>
-    <p>
-      YouTube Data API v3 key daalo — real Hindi movies load honge!<br><br>
-      Free key yahan se lo:<br>
-      <a href="https://console.cloud.google.com" target="_blank">console.cloud.google.com</a>
-      → New Project → YouTube Data API v3 → Credentials → API Key
-    </p>
-    <input class="api-inp" id="ytK" type="text" placeholder="AIza... (YouTube API key paste karo)">
-    <button class="api-go" onclick="launch()">🚀 Launch Star Universe</button>
-    <button class="api-demo" onclick="demo()">▶ Demo Mode Try Karo (API key ke bina)</button>
-    <div class="steps">
-      <h4>📋 API Key Kaise Milegi</h4>
-      <ol>
-        <li>console.cloud.google.com pe jao</li>
-        <li>New Project create karo</li>
-        <li>YouTube Data API v3 enable karo</li>
-        <li>Credentials → Create → API Key</li>
-        <li>Copy karo aur yahan paste karo</li>
-      </ol>
-    </div>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span>🔒</span> SSL Encrypted</div>
+    <div class="trust-item"><span>⚡</span> 100% Free Tools</div>
+    <div class="trust-item"><span>🌍</span> 25+ Languages</div>
+    <div class="trust-item"><span>🗑️</span> Files deleted after 2 hours</div>
+    <div class="trust-item"><span>✅</span> ISO 27001 Certified</div>
   </div>
 </div>
 
-<!-- ════ TOP LEADERBOARD AD ════ -->
-<div class="top-ad-wrap" id="topAdWrap" style="display:none">
-  <!-- REPLACE WITH YOUR ADSTERRA/PROPELLERADS LEADERBOARD CODE -->
-  <div class="ad-banner top-leaderboard">
-    <span class="ad-label">Ad</span>
-    <div class="ad-placeholder">
-      <span class="aico">📢</span>
-      <!-- Adsterra 728x90 Banner Code Here -->
-      <span>Advertisement — Apna Adsterra 728x90 code yahan lagao</span>
-    </div>
-  </div>
-</div>
-
-<!-- ════ NAVBAR ════ -->
+<!-- NAVBAR -->
 <nav>
-  <a class="nav-logo" onclick="goHome()">
-    <div class="logo-icon">⭐</div>
-    <span class="logo-txt">Star Universe</span>
-  </a>
-  <ul class="nav-links">
-    <li><a class="on" onclick="goHome();setNav(this)">🏠 Home</a></li>
-    <li><a onclick="loadQ('bollywood hit movie full hindi 2025');setNav(this)">🎬 Bollywood</a></li>
-    <li><a onclick="loadQ('hollywood hindi dubbed full movie 2025');setNav(this)">🌎 Hollywood</a></li>
-    <li><a onclick="loadQ('south indian hindi dubbed full movie 2025');setNav(this)">🎭 South</a></li>
-    <li><a onclick="loadQ('hindi web series full episodes 2025');setNav(this)">📺 Series</a></li>
-    <li><a onclick="loadQ('hindi comedy full movie');setNav(this)">😂 Comedy</a></li>
-    <li><a onclick="loadQ('hindi action movie full hd');setNav(this)">⚔️ Action</a></li>
-  </ul>
-  <div class="srch-bar" onclick="openSrch()">
-    <span>🔍</span><span>Hindi movies search karo...</span><kbd>⌘K</kbd>
-  </div>
-  <div class="nav-r">
-    <button class="ibtn" onclick="toggleTheme()" id="thbtn">🌙</button>
-    <button class="tg-btn" onclick="openTG()">📱 Telegram</button>
-    <button class="ibtn" onclick="showEarn()" title="Earning Stats">💰</button>
-    <button class="ibtn" onclick="document.getElementById('apiM').classList.add('on')" title="API Key">🔑</button>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">♥</div>
+      <span class="logo-text">PDF<span>Magic</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#tools">All Tools</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">API</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+      <a href="#" class="btn btn-ghost">Log in</a>
+      <a href="#" class="btn btn-primary">Get Premium</a>
+    </div>
   </div>
 </nav>
 
-<!-- ════ SEARCH ════ -->
-<div id="srchOv">
-  <div class="si-wrap">
-    <span class="si-ico">🔍</span>
-    <input id="srchInp" placeholder="Search Bollywood, Hollywood Hindi, South movies..." oninput="handleSrch(this.value)" onkeydown="if(event.key==='Escape')closeSrch()">
-    <button class="si-x" onclick="closeSrch()">✕</button>
-  </div>
-  <div id="srchList"></div>
-</div>
-
-<!-- ════ PLAYER ════ -->
-<div id="playerOv">
-  <div class="ph">
-    <div class="pt" id="pTtl">Loading...</div>
-    <button class="pc" onclick="closePlayer()">✕ Close</button>
-  </div>
-  <div class="pbody"><iframe id="ytF" allowfullscreen allow="autoplay;fullscreen;encrypted-media;picture-in-picture"></iframe></div>
-
-  <!-- IN-PLAYER AD SLOT -->
-  <div class="player-ad" id="playerAd">
-    <!-- REPLACE: Adsterra or PropellerAds in-stream ad code -->
-    <div style="text-align:center;color:rgba(255,255,255,.3);font-size:.72rem">
-      📢 Advertisement — Apna ad code yahan lagao (Adsterra / PropellerAds)
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge"><div class="dot"></div> 500M+ PDFs processed</div>
+    <h1>Every PDF Tool,<br>One <span class="highlight">Magic</span> Place</h1>
+    <p>Merge, split, compress, convert, edit and sign PDFs in seconds. No installs. No limits. Just effortless document magic — completely free.</p>
+    <div class="hero-ctas">
+      <button class="btn btn-primary btn-large" onclick="openModal('Merge PDF')">⚡ Start for Free</button>
+      <a href="#tools" class="btn btn-ghost btn-large">Browse All Tools →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><h3>25+</h3><p>PDF Tools</p></div>
+      <div class="stat-item"><h3>50M+</h3><p>Happy Users</p></div>
+      <div class="stat-item"><h3>99.9%</h3><p>Uptime</p></div>
     </div>
   </div>
-
-  <div class="pf">
-    <label>Quality:</label>
-    <button class="pqb on" onclick="setQ('hd1080',this)">1080p HD</button>
-    <button class="pqb" onclick="setQ('hd720',this)">720p</button>
-    <button class="pqb" onclick="setQ('large',this)">480p</button>
-    <button class="yt-ext" onclick="openYT()">▶ YouTube pe Open Karo</button>
-  </div>
-</div>
-
-<!-- ════ DETAIL ════ -->
-<div id="detOv" onclick="handleDetBg(event)">
-  <div class="det">
-    <div class="det-bd" id="detBd"></div>
-    <div class="det-body">
-      <div id="detPost"></div>
-      <div id="detInf"></div>
-    </div>
-    <!-- Detail page ad -->
-    <div class="det-ad" id="detAd">
-      <span class="ad-label">Ad</span>
-      <!-- REPLACE: Adsterra 728x90 or 300x250 -->
-      <div class="ad-placeholder"><span class="aico">📢</span><span>Advertisement — Adsterra 300x250 code yahan</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- ════ EARNING DASHBOARD ════ -->
-<div id="earnDash">
-  <div class="ed-ttl">💰 Earning Dashboard</div>
-  <div class="ed-row"><span class="lbl">Today Visitors</span><span class="val" id="ed-vis">0</span></div>
-  <div class="ed-row"><span class="lbl">Est. Today Earning</span><span class="val" id="ed-earn">₹0</span></div>
-  <div class="ed-divider"></div>
-  <div class="ed-row"><span class="lbl">Monthly Target</span><span class="val">₹30,000</span></div>
-  <div class="ed-row"><span class="lbl">Ad Network</span><span class="val">Adsterra</span></div>
-  <div class="ed-divider"></div>
-  <div style="font-size:.7rem;color:var(--t3);margin-top:.25rem">
-    📈 1000 visitors/day = ₹600–1000<br>
-    🔗 Connect: adsterra.com
-  </div>
-  <button onclick="document.getElementById('earnDash').classList.remove('on')" style="margin-top:.75rem;width:100%;padding:.3rem;border-radius:7px;background:var(--glass2);border:1px solid var(--bdr);color:var(--t2);font-size:.72rem;cursor:pointer;font-family:'Nunito',sans-serif">Close</button>
-</div>
-
-<!-- ════ TOAST ════ -->
-<div id="toast">✓ <span id="toastTxt"></span></div>
-
-<!-- ════ MAIN ════ -->
-<main id="mainW" style="position:relative;z-index:1">
-
-  <!-- HERO -->
-  <div class="hero" id="heroW">
-    <div class="h-bg" id="hBg"></div>
-    <div class="h-ov"></div>
-    <div class="h-con">
-      <div class="h-badge" id="hBadge">🔥 Trending</div>
-      <div class="h-ch" id="hCh"></div>
-      <h1 class="h-title" id="hTtl">Star Universe</h1>
-      <div class="h-meta" id="hMeta"></div>
-      <p class="h-desc" id="hDesc">Free Hindi Movies, Bollywood, Hollywood & South — sab ek jagah</p>
-      <div class="h-btns">
-        <button class="btn-w" onclick="heroW()">▶ Abhi Dekho</button>
-        <button class="btn-g" onclick="heroI()">ℹ More Info</button>
+  <div class="hero-visual">
+    <div class="hero-card-main">
+      <div class="upload-area" onclick="openModal('PDF Tool')">
+        <div class="upload-icon">📄</div>
+        <h3>Drop your PDF here</h3>
+        <p>or click to select a file from your device</p>
       </div>
     </div>
-    <div class="h-dots" id="hDots"></div>
+    <div class="floating-badge floating-badge-1">✅ <span>File secured</span></div>
+    <div class="floating-badge floating-badge-2">⚡ <span>Processing done in 2s</span></div>
   </div>
+</section>
 
-  <!-- CAT BAR -->
-  <div class="cat-bar">
-    <div class="ctab on" onclick="goHome();setCtab(this)">🌟 Sab</div>
-    <div class="ctab" onclick="loadQ('bollywood 2025 hindi full movie');setCtab(this)">🎬 Bollywood 2025</div>
-    <div class="ctab" onclick="loadQ('bollywood 2024 hindi full movie');setCtab(this)">🎬 Bollywood 2024</div>
-    <div class="ctab" onclick="loadQ('bollywood 2023 hindi full movie');setCtab(this)">🎬 Bollywood 2023</div>
-    <div class="ctab" onclick="loadQ('hollywood hindi dubbed full movie 2024 2025');setCtab(this)">🌎 Hollywood Hindi</div>
-    <div class="ctab" onclick="loadQ('south indian hindi dubbed full movie 2024');setCtab(this)">🎭 South Hindi</div>
-    <div class="ctab" onclick="loadQ('hindi web series full episodes 2024 2025');setCtab(this)">📺 Web Series</div>
-    <div class="ctab" onclick="loadQ('hindi action movie full hd');setCtab(this)">⚔️ Action</div>
-    <div class="ctab" onclick="loadQ('hindi comedy full movie');setCtab(this)">😂 Comedy</div>
-    <div class="ctab" onclick="loadQ('hindi romantic movie full');setCtab(this)">❤️ Romance</div>
-    <div class="ctab" onclick="loadQ('hindi horror movie full');setCtab(this)">👻 Horror</div>
-    <div class="ctab" onclick="loadQ('hindi thriller movie full');setCtab(this)">🔥 Thriller</div>
-    <div class="ctab" onclick="loadQ('marathi full movie');setCtab(this)">🪔 Marathi</div>
-    <div class="ctab" onclick="loadQ('punjabi full movie');setCtab(this)">🎵 Punjabi</div>
+<!-- SEARCH -->
+<div class="search-section">
+  <div class="search-bar">
+    <span style="font-size:18px; color:var(--text3)">🔍</span>
+    <input type="text" placeholder="Search for a tool... e.g. 'compress', 'merge', 'sign'" oninput="filterTools(this.value)">
+    <button class="btn btn-primary" style="border-radius:10px; padding:10px 20px; border:none; cursor:pointer;">Search</button>
   </div>
-
-  <!-- CHANNEL PILLS -->
-  <div class="ch-row">
-    <div class="chp on" onclick="filterCh('')">All Channels</div>
-    <div class="chp" onclick="filterCh('Shemaroo Movies')">📽 Shemaroo</div>
-    <div class="chp" onclick="filterCh('Goldmines')">🏆 Goldmines</div>
-    <div class="chp" onclick="filterCh('Ultra Movies')">🎬 Ultra Movies</div>
-    <div class="chp" onclick="filterCh('Rajshri Movies')">🎭 Rajshri</div>
-    <div class="chp" onclick="filterCh('Eros Now')">⚡ Eros Now</div>
-    <div class="chp" onclick="filterCh('T-Series Films')">🎵 T-Series</div>
-    <div class="chp" onclick="filterCh('Tips Films')">💎 Tips Films</div>
-  </div>
-
-  <!-- SECTIONS -->
-  <div id="secCont"></div>
-
-</main>
-
-<!-- MOBILE BAR -->
-<div class="mob-bar">
-  <button class="mb on" onclick="goHome();setMob(this)"><span class="i">🏠</span>Home</button>
-  <button class="mb" onclick="loadQ('bollywood hindi full movie 2025');setMob(this)"><span class="i">🎬</span>Bollywood</button>
-  <button class="mb" onclick="openSrch()"><span class="i">🔍</span>Search</button>
-  <button class="mb" onclick="loadQ('south hindi dubbed full movie');setMob(this)"><span class="i">🎭</span>South</button>
-  <button class="mb" onclick="loadQ('hindi web series full episodes');setMob(this)"><span class="i">📺</span>Series</button>
 </div>
 
-<!-- STICKY BOTTOM AD -->
-<div class="sticky-ad-bar" id="stickyAd">
-  <span class="sticky-ad-label">Ad</span>
-  <div class="sticky-ad-content">
-    <!-- REPLACE: Apna Adsterra / PropellerAds sticky banner code yahan lagao -->
-    <span style="font-size:.72rem;color:var(--t3)">📢 Sticky Advertisement — Adsterra 320x50 Mobile Banner code yahan lagao</span>
+<!-- CATEGORIES -->
+<div class="categories">
+  <button class="cat-pill active" onclick="filterCategory('all', this)">All Tools</button>
+  <button class="cat-pill" onclick="filterCategory('organize', this)">📁 Organize</button>
+  <button class="cat-pill" onclick="filterCategory('convert', this)">🔄 Convert</button>
+  <button class="cat-pill" onclick="filterCategory('optimize', this)">⚡ Optimize</button>
+  <button class="cat-pill" onclick="filterCategory('security', this)">🔒 Security</button>
+  <button class="cat-pill" onclick="filterCategory('edit', this)">✏️ Edit</button>
+  <button class="cat-pill" onclick="filterCategory('ai', this)">🤖 AI Tools</button>
+</div>
+
+<!-- TOOLS GRID -->
+<section class="tools-section" id="tools">
+  <div class="section-header">
+    <h2 class="section-title">All PDF Tools</h2>
+    <span id="tool-count" style="font-size:14px; color:var(--text3)">24 tools</span>
   </div>
-  <button class="close-sticky" onclick="document.getElementById('stickyAd').style.display='none'">✕</button>
+  <div class="tools-grid" id="toolsGrid"></div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div class="features-inner">
+    <div class="features-header">
+      <h2>Why Choose PDFMagic?</h2>
+      <p>Built with speed, security, and simplicity at its core. Everything you need, nothing you don't.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon-wrap" style="background: rgba(42,157,92,0.1)">🛡️</div>
+        <h3>Bank-Grade Security</h3>
+        <p>All file transfers use SSL encryption. Files are automatically deleted from our servers after 2 hours. ISO 27001 certified.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap" style="background: rgba(42,107,232,0.1)">⚡</div>
+        <h3>Blazing Fast Processing</h3>
+        <p>Our cloud infrastructure processes your PDFs in seconds, not minutes. Handle batch jobs with no slowdowns.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap" style="background: rgba(232,75,42,0.1)">🤖</div>
+        <h3>AI-Powered Features</h3>
+        <p>Smart OCR, AI translation that preserves formatting, and intelligent document analysis at your fingertips.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap" style="background: rgba(123,74,232,0.1)">📱</div>
+        <h3>Works Everywhere</h3>
+        <p>Web, mobile app, desktop app, and API. Access your favorite tools from any device, anytime, anywhere.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap" style="background: rgba(232,136,42,0.1)">🔄</div>
+        <h3>Custom Workflows</h3>
+        <p>Chain tools together and automate repetitive tasks. Create workflows once, run them hundreds of times.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap" style="background: rgba(42,157,92,0.1)">💻</div>
+        <h3>Developer API</h3>
+        <p>Full REST API with webhooks. Integrate PDF processing directly into your applications and pipelines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="how-content">
+    <h2>Simple as 1-2-3</h2>
+    <p>No learning curve. No sign-up required for free tools. Just upload, process, and download.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h4>Choose Your Tool</h4>
+          <p>Pick from 25+ PDF tools or search for exactly what you need.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h4>Upload Your Files</h4>
+          <p>Drag & drop or select files from your device, Google Drive, or Dropbox.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h4>Download & Done</h4>
+          <p>Get your processed PDF instantly. Share directly or save to cloud storage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="how-visual">
+    <div class="pdf-mockup">
+      <div class="pdf-header">
+        <div class="pdf-file-icon">PDF</div>
+        <div style="flex:1">
+          <div style="font-weight:600; font-size:14px; margin-bottom:4px">document.pdf</div>
+          <div style="font-size:12px; color:var(--text3)">Processing...</div>
+        </div>
+        <div style="font-size:13px; color:var(--green); font-weight:600">75%</div>
+      </div>
+      <div class="pdf-progress-bar"><div class="pdf-progress-fill"></div></div>
+      <div class="pdf-lines">
+        <div class="pdf-line" style="width:100%"></div>
+        <div class="pdf-line" style="width:85%"></div>
+        <div class="pdf-line" style="width:60%"></div>
+        <div class="pdf-line" style="width:90%"></div>
+        <div class="pdf-line" style="width:40%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <h2>Loved by millions</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"PDFMagic has completely replaced all our paid tools. The merge and compress features alone save us hours every week. Absolutely incredible."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SR</div>
+          <div><div class="author-name">Sneha Reddy</div><div class="author-role">Operations Manager, Mumbai</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The AI translation feature is mind-blowing — it converted my English PDF to Hindi keeping all the formatting intact. Game changer for our team!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AK</div>
+          <div><div class="author-name">Arjun Kulkarni</div><div class="author-role">Freelancer, Pune</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Fast, secure, and free. I've recommended this to my entire office. The eSign feature especially is so convenient — no more printing and scanning!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PM</div>
+          <div><div class="author-name">Priya Mehta</div><div class="author-role">HR Director, Bangalore</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-card">
+    <h2>Ready to Work Smarter?</h2>
+    <p>Join 50 million users who trust PDFMagic for all their document needs. Start free, upgrade when you're ready.</p>
+    <div class="cta-btns">
+      <button class="btn-white" onclick="openModal('Get Started')">🚀 Start for Free</button>
+      <button class="btn-outline-white">View All Features</button>
+    </div>
+  </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="ft-grid">
-    <div>
-      <div class="ft-logo">
-        <div class="logo-icon" style="width:30px;height:30px;font-size:.9rem;border-radius:8px">⭐</div>
-        <span class="logo-txt" style="font-size:1.3rem">Star Universe</span>
-      </div>
-      <p class="ft-desc">Free Hindi movies, Bollywood, Hollywood & South Indian — sab ek jagah. Powered by YouTube.</p>
-      <div class="ft-notice">⚠️ Yeh site sirf YouTube ke public videos ko index karti hai. Koi bhi content host nahi kiya jaata. Sab content YouTube pe freely available hai.</div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-icon">♥</div>
+        <span class="logo-text">PDF<span>Magic</span></span>
+      </a>
+      <p>The most complete PDF toolkit on the web. Free, fast, and secure. Loved by 50 million users worldwide.</p>
     </div>
-    <div class="ft-col">
-      <h4>Browse</h4>
-      <ul class="ft-links">
-        <li><a onclick="loadQ('bollywood hindi full movie 2025')">Bollywood 2025</a></li>
-        <li><a onclick="loadQ('hollywood hindi dubbed full movie')">Hollywood Hindi</a></li>
-        <li><a onclick="loadQ('south indian hindi dubbed full movie')">South Hindi</a></li>
-        <li><a onclick="loadQ('hindi web series full episodes')">Web Series</a></li>
-        <li><a onclick="loadQ('marathi full movie')">Marathi</a></li>
-        <li><a onclick="loadQ('punjabi full movie')">Punjabi</a></li>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Desktop App</a></li>
+        <li><a href="#">Mobile App</a></li>
+        <li><a href="#">API</a></li>
       </ul>
     </div>
-    <div class="ft-col">
-      <h4>Genre</h4>
-      <ul class="ft-links">
-        <li><a onclick="loadQ('hindi action movie full')">Action</a></li>
-        <li><a onclick="loadQ('hindi comedy movie full')">Comedy</a></li>
-        <li><a onclick="loadQ('hindi romantic movie full')">Romance</a></li>
-        <li><a onclick="loadQ('hindi horror movie full')">Horror</a></li>
-        <li><a onclick="loadQ('hindi thriller movie full')">Thriller</a></li>
-        <li><a onclick="loadQ('hindi family movie full')">Family</a></li>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="#">Merge PDF</a></li>
+        <li><a href="#">Compress PDF</a></li>
+        <li><a href="#">PDF to Word</a></li>
+        <li><a href="#">Sign PDF</a></li>
+        <li><a href="#">OCR PDF</a></li>
       </ul>
     </div>
-    <div class="ft-col">
-      <h4>Company</h4>
-      <ul class="ft-links">
-        <li><a>About Us</a></li>
-        <li><a>Contact</a></li>
-        <li><a>DMCA</a></li>
-        <li><a>Privacy Policy</a></li>
-        <li><a>Disclaimer</a></li>
-        <li><a onclick="openTG()">📱 Telegram</a></li>
+    <div class="footer-col">
+      <h4>Solutions</h4>
+      <ul>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Developers</a></li>
+        <li><a href="#">Enterprise</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Security</a></li>
+        <li><a href="#">Cookies</a></li>
       </ul>
     </div>
   </div>
-  <div class="ft-btm">
-    <span>© 2024–2026 Star Universe</span>
-    <span>Powered by ▶ YouTube API • Made with 💜</span>
+  <div class="footer-bottom">
+    <p>© 2026 PDFMagic. Made with ♥ for document lovers.</p>
+    <div class="footer-social">
+      <a href="#" class="social-btn">𝕏</a>
+      <a href="#" class="social-btn">in</a>
+      <a href="#" class="social-btn">f</a>
+      <a href="#" class="social-btn">▶</a>
+    </div>
   </div>
 </footer>
 
-<script>
-/* ══════════════════════════
-   CONFIG & STATE
-══════════════════════════ */
-let KEY = '', heroVids = [], hi = 0, hTimer, curV = null, curId = '', srchT, demoMode = false, visCount = 0;
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 class="modal-title" id="modalTitle">Merge PDF</h2>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-upload-zone">
+      <span class="emoji">📄</span>
+      <h3>Select or drag PDF files here</h3>
+      <p>Supported: PDF, Word, Excel, PPT, JPG, PNG</p>
+    </div>
+    <button class="modal-btn">⚡ Process Now</button>
+  </div>
+</div>
 
-/* ══ DEMO DATA ══ */
-const DEMO = [
-  {id:'PqKf3gaSM0w',title:'Sholay 1975 Full Hindi Classic Movie',ch:'ShemarooEnt',views:'50M views',thumb:'https://img.youtube.com/vi/PqKf3gaSM0w/maxresdefault.jpg',dur:'3:20:00',cat:'Bollywood'},
-  {id:'6d6gUmKVfaY',title:'Baahubali 2 The Conclusion Hindi Dubbed Full Movie',ch:'Goldmines',views:'65M views',thumb:'https://img.youtube.com/vi/6d6gUmKVfaY/maxresdefault.jpg',dur:'2:47:00',cat:'South Hindi'},
-  {id:'WjxIGR3e4Vg',title:'KGF Chapter 1 Hindi Full Movie',ch:'Goldmines',views:'80M views',thumb:'https://img.youtube.com/vi/WjxIGR3e4Vg/maxresdefault.jpg',dur:'2:16:00',cat:'South Hindi'},
-  {id:'2m0DYGn9oQc',title:'Pushpa The Rise Hindi Dubbed Full Movie',ch:'Goldmines',views:'90M views',thumb:'https://img.youtube.com/vi/2m0DYGn9oQc/maxresdefault.jpg',dur:'2:59:00',cat:'South Hindi'},
-  {id:'vRi1uRJ6-RM',title:'3 Idiots Full Movie Hindi',ch:'Rajkumar Hirani',views:'45M views',thumb:'https://img.youtube.com/vi/vRi1uRJ6-RM/maxresdefault.jpg',dur:'2:50:00',cat:'Bollywood'},
-  {id:'oNVfmCcCUMg',title:'Jab We Met Full Hindi Movie',ch:'Eros Now',views:'18M views',thumb:'https://img.youtube.com/vi/oNVfmCcCUMg/maxresdefault.jpg',dur:'2:16:00',cat:'Bollywood'},
-  {id:'QLzThKBBfRo',title:'Dilwale Dulhania Le Jayenge Full Movie',ch:'Yash Raj Films',views:'35M views',thumb:'https://img.youtube.com/vi/QLzThKBBfRo/maxresdefault.jpg',dur:'3:09:00',cat:'Bollywood'},
-  {id:'E5w_NAQGBS0',title:'Lagaan Full Movie HD Hindi',ch:'RelicEnt',views:'28M views',thumb:'https://img.youtube.com/vi/E5w_NAQGBS0/maxresdefault.jpg',dur:'3:44:00',cat:'Bollywood'},
-  {id:'kDmjZDhm5mg',title:'Dil Chahta Hai Full Movie Hindi',ch:'Excel Movies',views:'14M views',thumb:'https://img.youtube.com/vi/kDmjZDhm5mg/maxresdefault.jpg',dur:'3:03:00',cat:'Bollywood'},
-  {id:'0O4dDXd50X4',title:'Andaz Apna Apna Full Comedy Movie Hindi',ch:'Rajshri Movies',views:'20M views',thumb:'https://img.youtube.com/vi/0O4dDXd50X4/maxresdefault.jpg',dur:'2:40:00',cat:'Comedy'},
-  {id:'RKaRdZGPKiM',title:'Kal Ho Naa Ho Full Movie HD',ch:'Dharma Productions',views:'22M views',thumb:'https://img.youtube.com/vi/RKaRdZGPKiM/maxresdefault.jpg',dur:'3:31:00',cat:'Bollywood'},
-  {id:'6kNqfW2aIMs',title:'Koi Mil Gaya Full Movie Hindi',ch:'Yash Raj Films',views:'12M views',thumb:'https://img.youtube.com/vi/6kNqfW2aIMs/maxresdefault.jpg',dur:'2:51:00',cat:'Hollywood Hindi'},
+<script>
+const tools = [
+  { name: 'Merge PDF', desc: 'Combine multiple PDFs in any order', icon: '🔗', color: '#E84B2A', bg: 'rgba(232,75,42,0.1)', cat: 'organize' },
+  { name: 'Split PDF', desc: 'Separate pages into individual files', icon: '✂️', color: '#2A9D5C', bg: 'rgba(42,157,92,0.1)', cat: 'organize' },
+  { name: 'Compress PDF', desc: 'Reduce size without losing quality', icon: '⚡', color: '#2A6BE8', bg: 'rgba(42,107,232,0.1)', cat: 'optimize' },
+  { name: 'PDF to Word', desc: 'Convert to fully editable DOCX', icon: '📝', color: '#2A6BE8', bg: 'rgba(42,107,232,0.1)', cat: 'convert' },
+  { name: 'PDF to Excel', desc: 'Extract tables into spreadsheets', icon: '📊', color: '#2A9D5C', bg: 'rgba(42,157,92,0.1)', cat: 'convert' },
+  { name: 'PDF to PPT', desc: 'Turn slides back into PowerPoint', icon: '📽️', color: '#E8882A', bg: 'rgba(232,136,42,0.1)', cat: 'convert' },
+  { name: 'Word to PDF', desc: 'Convert DOC/DOCX to PDF', icon: '🔄', color: '#2A6BE8', bg: 'rgba(42,107,232,0.1)', cat: 'convert' },
+  { name: 'Excel to PDF', desc: 'Convert spreadsheets to PDF', icon: '📋', color: '#2A9D5C', bg: 'rgba(42,157,92,0.1)', cat: 'convert' },
+  { name: 'PPT to PDF', desc: 'Convert presentations to PDF', icon: '🎯', color: '#E8882A', bg: 'rgba(232,136,42,0.1)', cat: 'convert' },
+  { name: 'PDF to JPG', desc: 'Convert each page to image', icon: '🖼️', color: '#7B4AE8', bg: 'rgba(123,74,232,0.1)', cat: 'convert' },
+  { name: 'JPG to PDF', desc: 'Convert images to PDF', icon: '📸', color: '#7B4AE8', bg: 'rgba(123,74,232,0.1)', cat: 'convert' },
+  { name: 'Edit PDF', desc: 'Add text, images, and shapes', icon: '✏️', color: '#E84B2A', bg: 'rgba(232,75,42,0.1)', cat: 'edit', badge: 'Popular' },
+  { name: 'Sign PDF', desc: 'eSign documents electronically', icon: '✍️', color: '#E8882A', bg: 'rgba(232,136,42,0.1)', cat: 'security', badge: 'Popular' },
+  { name: 'Protect PDF', desc: 'Add password protection', icon: '🔒', color: '#E84B2A', bg: 'rgba(232,75,42,0.1)', cat: 'security' },
+  { name: 'Unlock PDF', desc: 'Remove password from PDF', icon: '🔓', color: '#2A9D5C', bg: 'rgba(42,157,92,0.1)', cat: 'security' },
+  { name: 'Watermark PDF', desc: 'Stamp text or image watermark', icon: '💧', color: '#2A6BE8', bg: 'rgba(42,107,232,0.1)', cat: 'edit' },
+  { name: 'Rotate PDF', desc: 'Rotate pages to correct orientation', icon: '🔃', color: '#7B4AE8', bg: 'rgba(123,74,232,0.1)', cat: 'organize' },
+  { name: 'Organize PDF', desc: 'Rearrange, delete or add pages', icon: '🗂️', color: '#E8882A', bg: 'rgba(232,136,42,0.1)', cat: 'organize' },
+  { name: 'OCR PDF', desc: 'Make scanned PDFs searchable', icon: '🤖', color: '#2A9D5C', bg: 'rgba(42,157,92,0.1)', cat: 'ai' },
+  { name: 'Translate PDF', desc: 'AI translation preserving layout', icon: '🌐', color: '#7B4AE8', bg: 'rgba(123,74,232,0.1)', cat: 'ai', badge: 'New!' },
+  { name: 'Redact PDF', desc: 'Permanently hide sensitive info', icon: '🚫', color: '#E84B2A', bg: 'rgba(232,75,42,0.1)', cat: 'security' },
+  { name: 'Compare PDF', desc: 'Spot differences side-by-side', icon: '🔍', color: '#2A6BE8', bg: 'rgba(42,107,232,0.1)', cat: 'edit' },
+  { name: 'Crop PDF', desc: 'Crop margins or specific areas', icon: '✂️', color: '#E8882A', bg: 'rgba(232,136,42,0.1)', cat: 'edit' },
+  { name: 'Repair PDF', desc: 'Fix damaged or corrupted PDFs', icon: '🔧', color: '#2A9D5C', bg: 'rgba(42,157,92,0.1)', cat: 'optimize' },
 ];
 
-/* ══ API LAUNCH ══ */
-function launch(){
-  const k=document.getElementById('ytK').value.trim();
-  if(!k){toast('❌ API key daalo!');return;}
-  KEY=k;demoMode=false;
-  document.getElementById('apiM').classList.remove('on');
-  document.getElementById('topAdWrap').style.display='flex';
-  initSite();
-}
-function demo(){
-  demoMode=true;KEY='';
-  document.getElementById('apiM').classList.remove('on');
-  document.getElementById('topAdWrap').style.display='flex';
-  toast('📦 Demo Mode — Real YouTube videos!');
-  initDemo();
+let currentFilter = 'all';
+let searchQuery = '';
+
+function renderTools() {
+  const grid = document.getElementById('toolsGrid');
+  const filtered = tools.filter(t => {
+    const matchesCat = currentFilter === 'all' || t.cat === currentFilter;
+    const matchesSearch = !searchQuery || t.name.toLowerCase().includes(searchQuery) || t.desc.toLowerCase().includes(searchQuery);
+    return matchesCat && matchesSearch;
+  });
+  document.getElementById('tool-count').textContent = filtered.length + ' tools';
+  grid.innerHTML = filtered.map((t, i) => `
+    <div class="tool-card" style="--tool-color: ${t.color}; --tool-bg: ${t.bg}; animation: fadeInUp 0.4s ${i * 0.04}s ease both" onclick="openModal('${t.name}')">
+      ${t.badge ? `<div class="tool-badge">${t.badge}</div>` : ''}
+      <div class="tool-icon" style="background: ${t.bg}">${t.icon}</div>
+      <div class="tool-name">${t.name}</div>
+      <div class="tool-desc">${t.desc}</div>
+    </div>
+  `).join('');
 }
 
-/* ══ YOUTUBE FETCH ══ */
-async function ytSrch(q,max=20){
-  if(!KEY)return[];
-  const url=`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(q)}&maxResults=${max}&videoDuration=long&key=${KEY}&relevanceLanguage=hi`;
-  try{
-    const r=await fetch(url);
-    if(!r.ok){const e=await r.json();toast('❌ '+(e.error?.message||'API Error'));return[];}
-    const d=await r.json();
-    return(d.items||[]).map(i=>({
-      id:i.id.videoId,
-      title:i.snippet.title,
-      ch:i.snippet.channelTitle,
-      desc:i.snippet.description,
-      thumb:i.snippet.thumbnails?.high?.url||i.snippet.thumbnails?.medium?.url,
-      date:i.snippet.publishedAt?.slice(0,10)||'',
-      cat:q,
-    }));
-  }catch{toast('❌ Network error');return[];}
+function filterCategory(cat, el) {
+  currentFilter = cat;
+  document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  renderTools();
 }
 
-/* ══ INIT ══ */
-async function initSite(){
-  toast('🚀 Loading Star Universe...');
-  trackVisit();
-  const hd=await ytSrch('bollywood blockbuster hit full movie hindi 2024 2025',8);
-  heroVids=hd.filter(v=>v.thumb);
-  if(heroVids.length)buildHero();
-  const cont=document.getElementById('secCont');cont.innerHTML='';
-  const secs=[
-    {t:'🔥 Trending Bollywood 2025',q:'bollywood hindi full movie 2025 new release'},
-    {t:'💥 Superhit Blockbusters',q:'bollywood blockbuster hit movie full hindi'},
-    {t:'🌎 Hollywood Hindi Dubbed',q:'hollywood hindi dubbed full movie 2024 2025'},
-    {t:'🎭 South Hindi Dubbed',q:'south indian hindi dubbed full movie baahubali kgf'},
-    {t:'📺 Hindi Web Series',q:'hindi web series all episodes 2024 2025'},
-    {t:'😂 Hindi Comedy Movies',q:'hindi comedy movie full 2022 2023 2024'},
-    {t:'⚔️ Hindi Action Movies',q:'hindi action movie full hd 2024'},
-    {t:'❤️ Hindi Romance Movies',q:'hindi romantic movie full'},
-    {t:'👨‍👩‍👧 Family Movies',q:'hindi family movie full'},
-  ];
-  for(let i=0;i<secs.length;i++){
-    const s=secs[i];
-    const el=mkSkSec(s.t);
-    cont.appendChild(el);
-    // Insert in-feed ad after 2nd section
-    if(i===1){
-      const adSec=document.createElement('div');
-      adSec.className='sec';
-      adSec.style.padding='1.2rem 1.5rem 0';
-      adSec.innerHTML=`
-        <div class="ad-banner in-feed" style="margin:0">
-          <span class="ad-label">Advertisement</span>
-          <!-- REPLACE: Adsterra or PropellerAds 728x90 / 970x90 code yahan -->
-          <div class="ad-placeholder"><span class="aico">📢</span><span>In-Feed Advertisement — Adsterra Native Ad code yahan lagao</span></div>
-        </div>`;
-      cont.appendChild(adSec);
-    }
-    const data=await ytSrch(s.q,18);
-    if(data.length)fillSec(el,data);
-    else el.querySelector('.card-row').innerHTML=`<div style="color:var(--t3);padding:1rem;font-size:.82rem">Results load nahi hue — API quota check karo</div>`;
+function filterTools(query) {
+  searchQuery = query.toLowerCase();
+  renderTools();
+}
+
+function openModal(toolName) {
+  document.getElementById('modalTitle').textContent = toolName;
+  document.getElementById('modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(e) {
+  if (!e || e.target === document.getElementById('modal')) {
+    document.getElementById('modal').classList.remove('active');
+    document.body.style.overflow = '';
   }
 }
 
-function initDemo(){
-  trackVisit();
-  heroVids=DEMO.slice(0,5);buildHero();
-  const cont=document.getElementById('secCont');cont.innerHTML='';
-  [
-    {t:'🔥 Popular Bollywood',f:v=>v.cat==='Bollywood'},
-    {t:'🎭 South Hindi Dubbed',f:v=>v.cat==='South Hindi'},
-    {t:'😂 Comedy Hits',f:v=>v.cat==='Comedy'},
-    {t:'🌟 All Movies',f:()=>true},
-  ].forEach(g=>{
-    const el=mkSkSec(g.t);cont.appendChild(el);
-    fillSec(el,DEMO.filter(g.f).length?DEMO.filter(g.f):DEMO);
+// Theme toggle
+const toggle = document.getElementById('themeToggle');
+toggle.addEventListener('click', () => {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  toggle.textContent = isDark ? '🌙' : '☀️';
+});
+
+// Init
+renderTools();
+
+// Scroll animation observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.animation = 'fadeInUp 0.6s ease both';
+    }
   });
-}
+}, { threshold: 0.1 });
 
-/* ══ HERO ══ */
-function buildHero(){
-  renderHero();clearInterval(hTimer);
-  hTimer=setInterval(()=>{hi=(hi+1)%heroVids.length;renderHero();},7000);
-}
-function renderHero(){
-  const v=heroVids[hi];if(!v)return;curV=v;
-  document.getElementById('hBg').style.cssText=`position:absolute;inset:0;background:url(${v.thumb}) center 20%/cover no-repeat;transition:all .9s ease`;
-  document.getElementById('hBadge').textContent='🔥 '+(v.cat||'Trending');
-  document.getElementById('hCh').textContent='📺 '+(v.ch||'');
-  document.getElementById('hTtl').textContent=clean(v.title);
-  document.getElementById('hMeta').innerHTML=`${v.date?`<span>📅 ${v.date}</span>`:''}${v.views?`<span class="vw">👁 ${v.views}</span>`:''}<span style="color:var(--green);font-weight:800">✓ FREE</span>`;
-  document.getElementById('hDesc').textContent=v.desc?(v.desc.slice(0,160)+'...'):'Watch FREE on Star Universe!';
-  document.getElementById('hDots').innerHTML=heroVids.map((_,i)=>`<div class="hdot${i===hi?' on':''}" onclick="goH(${i})"></div>`).join('');
-}
-function goH(i){hi=i;renderHero();clearInterval(hTimer);hTimer=setInterval(()=>{hi=(hi+1)%heroVids.length;renderHero();},7000);}
-function heroW(){if(heroVids[hi])playV(heroVids[hi]);}
-function heroI(){if(heroVids[hi])openDet(heroVids[hi]);}
-
-/* ══ SECTION ══ */
-function mkSkSec(t){
-  const d=document.createElement('div');d.className='sec';
-  d.innerHTML=`<div class="sec-hdr"><h2 class="sec-ttl">${t}</h2><span class="see-all">See All →</span></div>
-  <div class="row-w">
-    <button class="arr l" onclick="scrollR(this,-1)">◀</button>
-    <div class="card-row">
-      ${Array(5).fill(0).map(()=>`<div class="sk-c"><div class="sk-t skel"></div><div class="sk-l skel"></div><div class="sk-l2 skel"></div></div>`).join('')}
-      <!-- In-row ad card -->
-      <div class="feed-ad"><span class="a-label">Ad</span><span class="a-ico">📢</span><span class="a-txt">Advertisement</span></div>
-    </div>
-    <button class="arr r" onclick="scrollR(this,1)">▶</button>
-  </div>`;
-  return d;
-}
-function fillSec(el,items){
-  const row=el.querySelector('.card-row');
-  const adCard=row.querySelector('.feed-ad');
-  row.innerHTML='';
-  items.forEach(v=>row.appendChild(mkCard(v)));
-  // Re-add in-row ad
-  if(adCard)row.appendChild(adCard);
-}
-
-/* ══ CARD ══ */
-function mkCard(v){
-  const d=document.createElement('div');d.className='vc';
-  d.onclick=()=>openDet(v);
-  const th=v.thumb||`https://img.youtube.com/vi/${v.id}/mqdefault.jpg`;
-  const ttl=clean(v.title);
-  d.innerHTML=`
-    <div class="vc-thumb">
-      <img src="${th}" alt="${ttl}" loading="lazy" onerror="this.src='https://img.youtube.com/vi/${v.id}/mqdefault.jpg'">
-      <div class="vhd">HD</div>
-      ${v.dur?`<div class="vdur">${v.dur}</div>`:''}
-      <div class="vov"><div class="pring">▶</div></div>
-    </div>
-    <div class="vc-info">
-      <div class="vc-ttl">${ttl}</div>
-      <div class="vc-meta"><span class="vc-ch">${v.ch||''}</span><span>${v.views||'📺 YouTube'}</span></div>
-    </div>`;
-  return d;
-}
-
-/* ══ DETAIL ══ */
-function openDet(v){
-  curV=v;
-  const th=v.thumb||`https://img.youtube.com/vi/${v.id}/mqdefault.jpg`;
-  const mx=`https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`;
-  const ttl=clean(v.title);
-  document.getElementById('detBd').innerHTML=`<img src="${mx}" onerror="this.src='${th}'" alt="${ttl}"><div class="det-bov"></div><button class="det-x" onclick="closeDet()">✕</button>`;
-  document.getElementById('detPost').innerHTML=`<div class="det-poster"><img src="${mx}" onerror="this.src='${th}'" alt="${ttl}"></div>`;
-  document.getElementById('detInf').innerHTML=`
-    <div class="det-ch"><span>YouTube</span>📺 ${v.ch||''}</div>
-    <h1 class="det-title">${ttl}</h1>
-    <div class="det-meta">${v.date?`<span>📅 ${v.date}</span>`:''}<span class="free">✓ FREE</span>${v.views?`<span>👁 ${v.views}</span>`:''}</div>
-    <p class="det-desc">${v.desc||(ttl+' — Watch FREE on Star Universe, powered by YouTube.')}</p>
-    <div class="det-btns">
-      <button class="btn-w" onclick="playV(curV)">▶ Abhi Dekho</button>
-      <button class="btn-yt" onclick="window.open('https://youtube.com/watch?v=${v.id}','_blank')">▶ YouTube</button>
-      <button class="btn-g" onclick="shareV('${v.id}','${ttl.replace(/'/g,"\\'")}')">↗ Share</button>
-    </div>`;
-  document.getElementById('detOv').classList.add('on');
-  document.body.style.overflow='hidden';
-}
-function closeDet(){document.getElementById('detOv').classList.remove('on');document.body.style.overflow='';}
-function handleDetBg(e){if(e.target===document.getElementById('detOv'))closeDet();}
-
-/* ══ PLAYER ══ */
-function playV(v){
-  curV=v;curId=v.id;closeDet();
-  document.getElementById('pTtl').textContent=clean(v.title);
-  document.getElementById('ytF').src=`https://www.youtube.com/embed/${v.id}?autoplay=1&rel=0&modestbranding=1&vq=hd1080`;
-  document.getElementById('playerOv').classList.add('on');
-  document.body.style.overflow='hidden';
-  trackView();
-}
-function setQ(q,btn){document.querySelectorAll('.pqb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');document.getElementById('ytF').src=`https://www.youtube.com/embed/${curId}?autoplay=1&rel=0&modestbranding=1&vq=${q}`;}
-function openYT(){if(curId)window.open(`https://youtube.com/watch?v=${curId}`,'_blank');}
-function closePlayer(){document.getElementById('playerOv').classList.remove('on');document.getElementById('ytF').src='';document.body.style.overflow='';}
-
-/* ══ SEARCH ══ */
-function openSrch(){document.getElementById('srchOv').classList.add('on');setTimeout(()=>document.getElementById('srchInp').focus(),100);document.body.style.overflow='hidden';}
-function closeSrch(){document.getElementById('srchOv').classList.remove('on');document.getElementById('srchInp').value='';document.getElementById('srchList').innerHTML='';document.body.style.overflow='';}
-function handleSrch(q){clearTimeout(srchT);if(!q.trim()){document.getElementById('srchList').innerHTML='';return;}document.getElementById('srchList').innerHTML='<div class="si-empty">🔍 Searching...</div>';srchT=setTimeout(()=>doSrch(q),420);}
-async function doSrch(q){
-  const res=document.getElementById('srchList');
-  const items=demoMode?DEMO.filter(v=>clean(v.title).toLowerCase().includes(q.toLowerCase())):await ytSrch(q+' hindi full movie',10);
-  if(!items.length){res.innerHTML='<div class="si-empty">No results found for "'+q+'"</div>';return;}
-  res.innerHTML=items.slice(0,9).map((v,i)=>`
-    <div class="si-item" style="animation-delay:${i*.04}s" onclick="closeSrch();openDet(${JSON.stringify(v).replace(/"/g,'&quot;')})">
-      <img class="si-thumb" src="${v.thumb||`https://img.youtube.com/vi/${v.id}/mqdefault.jpg`}" onerror="this.src='https://img.youtube.com/vi/${v.id}/mqdefault.jpg'" alt="">
-      <div class="si-info"><div class="t">${clean(v.title)}</div><div class="m">${v.ch} · ${v.date||''}</div></div>
-    </div>`).join('');
-}
-
-/* ══ LOAD CATEGORY ══ */
-async function loadQ(q){
-  const cont=document.getElementById('secCont');cont.innerHTML='';
-  document.getElementById('heroW').style.display='none';
-  window.scrollTo({top:0,behavior:'smooth'});
-  const back=document.createElement('div');back.style.cssText='padding:1.4rem 1.5rem .5rem;position:relative;z-index:1';
-  back.innerHTML=`<button onclick="goHome()" style="background:var(--glass2);border:1px solid var(--bdr);color:var(--t2);padding:.42rem .9rem;border-radius:9px;font-size:.78rem;cursor:pointer;font-family:'Nunito',sans-serif">← Wapas Jaao</button>`;
-  cont.appendChild(back);
-  const el=mkSkSec('🎬 '+(q.split(' ').slice(0,5).join(' ')));cont.appendChild(el);
-  if(demoMode){fillSec(el,DEMO);return;}
-  const data=await ytSrch(q,24);if(data.length)fillSec(el,data);
-  const el2=mkSkSec('🌟 More Results');cont.appendChild(el2);
-  const d2=await ytSrch(q+' latest new',20);if(d2.length)fillSec(el2,d2);
-}
-
-function filterCh(ch){document.querySelectorAll('.chp').forEach(p=>p.classList.remove('on'));event.target.classList.add('on');if(!ch){toast('Showing all channels');return;}loadQ(ch+' full movie hindi');}
-
-/* ══ HOME ══ */
-function goHome(){
-  document.getElementById('secCont').innerHTML='';
-  document.getElementById('heroW').style.display='block';
-  document.getElementById('topAdWrap').style.display='flex';
-  if(demoMode)initDemo();else initSite();
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-/* ══ SCROLL ══ */
-function scrollR(btn,dir){btn.closest('.row-w').querySelector('.card-row').scrollBy({left:dir*660,behavior:'smooth'});}
-
-/* ══ THEME ══ */
-function toggleTheme(){const t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);document.getElementById('thbtn').textContent=t==='dark'?'🌙':'☀️';}
-
-/* ══ NAV ══ */
-function setNav(el){document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('on'));el.classList.add('on');}
-function setCtab(el){document.querySelectorAll('.ctab').forEach(c=>c.classList.remove('on'));el.classList.add('on');}
-function setMob(el){document.querySelectorAll('.mb').forEach(b=>b.classList.remove('on'));el.classList.add('on');}
-
-/* ══ EARNING TRACKER (simulated) ══ */
-function trackVisit(){visCount++;updateEarn();}
-function trackView(){visCount+=2;updateEarn();}
-function updateEarn(){
-  document.getElementById('ed-vis').textContent=visCount;
-  const earn=Math.floor(visCount*0.65);
-  document.getElementById('ed-earn').textContent='₹'+earn;
-}
-function showEarn(){document.getElementById('earnDash').classList.toggle('on');}
-
-/* ══ MISC ══ */
-function clean(t){return(t||'').replace(/\|.*$/,'').replace(/[-–].*Full.*Movie.*/i,'').replace(/\(.*?\)/g,'').replace(/\[.*?\]/g,'').trim().slice(0,72);}
-function shareV(id,t){if(navigator.clipboard)navigator.clipboard.writeText(`https://youtube.com/watch?v=${id}`);toast('🔗 Link copied: '+t);}
-function openTG(){toast('📱 Apna Telegram channel link yahan add karo!');window.open('https://t.me/','_blank');}
-function toast(m){document.getElementById('toastTxt').textContent=m;const el=document.getElementById('toast');el.classList.add('on');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('on'),3200);}
-document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();openSrch();}if(e.key==='Escape'){closeSrch();closeDet();closePlayer();}});
+document.querySelectorAll('.feature-card, .testimonial-card, .step').forEach(el => observer.observe(el));
 </script>
-
-<!-- ════════════════════════════════════════
-  📋 AD INTEGRATION GUIDE (COMMENTS)
-  
-  ADSTERRA SETUP:
-  1. adsterra.com pe free account banao
-  2. Website add karo → Verify karo
-  3. Ad codes copy karo (Banner + Native + Popunder)
-  4. Upar diye placeholders mein paste karo
-  
-  AD POSITIONS IN THIS FILE:
-  ✅ Line ~290: Top Leaderboard 728x90
-  ✅ Line ~360: In-Player Ad Slot  
-  ✅ Line ~440: Detail Modal Ad 300x250
-  ✅ Line ~560: In-Feed Section Ad
-  ✅ Line ~628: In-Row Card Ad (har section mein)
-  ✅ Line ~660: Sticky Bottom Ad 320x50
-  
-  PROPELLERADS:
-  1. propellerads.com pe account banao
-  2. Push notifications enable karo (best income)
-  3. Script head mein lagao
-  
-  EXPECTED INCOME:
-  500 daily visitors  → ₹300-600/day
-  1000 daily visitors → ₹600-1200/day
-  2000 daily visitors → ₹1200-2500/day
-════════════════════════════════════════ -->
 </body>
 </html>
