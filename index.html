@@ -437,7 +437,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2024 The Star Shop &nbsp;|&nbsp; <a href="mailto:afrozask143@gmail.com">afrozask143@gmail.com</a></p>
+  <p>© 2024 The Star Shop &nbsp;|&nbsp; <a href="/cdn-cgi/l/email-protection#e28384908d98839189d3d6d1a2858f838b8ecc818d8f"><span class="__cf_email__" data-cfemail="8beaedf9e4f1eaf8e0babfb8cbece6eae2e7a5e8e4e6">[email&#160;protected]</span></a></p>
   <p style="margin-top:6px">Made with ★ love</p>
 </footer>
 
@@ -483,9 +483,9 @@
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // EmailJS init – replace with your actual public key
-  emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+  emailjs.init("uBMk2SDbmp13vRLc7");
 
   let cart = [];
 
@@ -618,7 +618,7 @@
 
     try {
       // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your EmailJS values
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams);
+      await emailjs.send('service_eebtph8', 'template_qtlj99j', templateParams);
       showToast('✅ Order sent! We\'ll contact you soon.');
       cart = [];
       document.querySelectorAll('.added-badge').forEach(b => b.style.display = 'none');
@@ -656,14 +656,4 @@
   document.getElementById('carousel').addEventListener('mouseenter', () => clearInterval(autoSlide));
   document.getElementById('carousel').addEventListener('mouseleave', () => {
     autoSlide = setInterval(() => {
-      const c = document.getElementById('carousel');
-      if (c.scrollLeft + c.clientWidth >= c.scrollWidth - 10) {
-        c.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        c.scrollBy({ left: 290, behavior: 'smooth' });
-      }
-    }, 3000);
-  });
-</script>
-</body>
-</html>
+      const c = document.getElementById('carous
