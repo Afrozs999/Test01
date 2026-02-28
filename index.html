@@ -485,6 +485,157 @@ footer strong { color:white; }
 }
 .toast.show { transform:translateY(0); opacity:1; }
 
+/* ══════════════════════════════════════════
+   ADSTERRA ADS STYLES
+   ══════════════════════════════════════════ */
+
+/* ── Banner Ad (Header ke neeche) ── */
+.adsterra-banner-wrap {
+  width:100%; background:var(--bg3);
+  display:flex; align-items:center; justify-content:center;
+  padding:10px 20px; min-height:70px;
+  border-bottom:1px solid var(--feature-border);
+  transition: background .3s;
+}
+.adsterra-banner-wrap .ad-placeholder {
+  width:100%; max-width:728px; height:90px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(37,99,235,0.04),
+    rgba(37,99,235,0.04) 10px,
+    rgba(56,189,248,0.04) 10px,
+    rgba(56,189,248,0.04) 20px
+  );
+  border:2px dashed var(--blue-200);
+  border-radius:10px;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:4px;
+}
+.ad-placeholder-label {
+  font-size:11px; font-weight:700;
+  color:var(--blue-400); text-transform:uppercase; letter-spacing:.08em;
+}
+.ad-placeholder-sub {
+  font-size:10px; color:var(--text3);
+  font-family: monospace;
+}
+
+/* ── Footer Banner Ad ── */
+.adsterra-footer-banner {
+  width:100%; background:var(--bg3);
+  display:flex; align-items:center; justify-content:center;
+  padding:16px 20px; min-height:80px;
+  border-top:1px solid var(--feature-border);
+  transition: background .3s;
+}
+.adsterra-footer-banner .ad-placeholder {
+  width:100%; max-width:728px; height:90px;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(16,185,129,0.04),
+    rgba(16,185,129,0.04) 10px,
+    rgba(6,182,212,0.04) 10px,
+    rgba(6,182,212,0.04) 20px
+  );
+  border:2px dashed rgba(16,185,129,0.4);
+  border-radius:10px;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:4px;
+}
+.adsterra-footer-banner .ad-placeholder-label { color:#10b981; }
+
+/* ── Social Bar (Floating Corner) ── */
+.adsterra-social-bar {
+  position:fixed; bottom:90px; right:20px;
+  z-index:998; display:flex; flex-direction:column;
+  align-items:flex-end; gap:8px;
+}
+.social-bar-placeholder {
+  background: var(--card-bg);
+  border:2px dashed var(--blue-200);
+  border-radius:12px; padding:10px 14px;
+  display:flex; align-items:center; gap:8px;
+  box-shadow: var(--shadow);
+  cursor:pointer; transition:all .2s;
+  min-width:180px;
+}
+.social-bar-placeholder:hover { transform:translateX(-4px); }
+.social-bar-icon {
+  width:36px; height:36px; border-radius:8px;
+  background:linear-gradient(135deg,var(--blue-400),var(--accent));
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; flex-shrink:0;
+}
+.social-bar-text { font-size:11px; color:var(--text2); line-height:1.4; }
+.social-bar-text strong { display:block; font-size:12px; color:var(--blue-400); }
+.social-bar-close {
+  position:absolute; top:-8px; right:-8px;
+  width:20px; height:20px; border-radius:50%;
+  background:var(--text2); color:white;
+  border:none; cursor:pointer; font-size:11px;
+  display:flex; align-items:center; justify-content:center;
+  transition:background .2s;
+}
+.social-bar-close:hover { background:var(--blue-400); }
+
+/* ── Interstitial Ad (Download popup) ── */
+.interstitial-overlay {
+  position:fixed; inset:0; z-index:9998;
+  background:rgba(5,12,25,0.85);
+  backdrop-filter:blur(6px);
+  display:none; align-items:center; justify-content:center;
+  animation:fadeIn .3s ease;
+}
+.interstitial-overlay.show { display:flex; }
+.interstitial-box {
+  background:var(--card-bg);
+  border-radius:20px; padding:32px;
+  max-width:520px; width:90%;
+  border:1px solid var(--card-border);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  position:relative; text-align:center;
+}
+.interstitial-ad-area {
+  width:100%; height:250px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(139,92,246,0.04),
+    rgba(139,92,246,0.04) 10px,
+    rgba(236,72,153,0.04) 10px,
+    rgba(236,72,153,0.04) 20px
+  );
+  border:2px dashed rgba(139,92,246,0.4);
+  border-radius:12px;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:6px; margin-bottom:20px;
+}
+.interstitial-ad-area .ad-placeholder-label { color:#8b5cf6; font-size:13px; }
+.interstitial-ad-area .ad-placeholder-sub { font-size:11px; }
+.interstitial-skip-row {
+  display:flex; align-items:center; justify-content:center; gap:12px;
+}
+.interstitial-timer {
+  font-size:13px; color:var(--text2); font-weight:500;
+}
+.interstitial-timer span { color:var(--blue-400); font-weight:700; }
+.btn-skip-ad {
+  padding:10px 24px; border-radius:10px;
+  background:linear-gradient(135deg,var(--blue-400),var(--accent2));
+  color:white; border:none; cursor:pointer;
+  font-size:13px; font-weight:600;
+  transition:all .2s; opacity:.5; pointer-events:none;
+}
+.btn-skip-ad.ready { opacity:1; pointer-events:all; }
+.btn-skip-ad.ready:hover { transform:translateY(-1px); }
+.interstitial-close {
+  position:absolute; top:12px; right:16px;
+  background:none; border:none; cursor:pointer;
+  font-size:20px; color:var(--text3); transition:color .2s;
+}
+.interstitial-close:hover { color:var(--text); }
+
 /* ── Animations ── */
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(24px); }
@@ -509,6 +660,12 @@ footer strong { color:white; }
   .trust-bar { gap:24px; padding:20px; }
 }
 </style>
+
+<!-- Adsterra Popunder -->
+<script src="https://pl28810807.effectivegatecpm.com/cb/83/d9/cb83d919d4776561726534d6e1d41272.js"></script>
+<!-- Adsterra Social Bar -->
+<script src="https://pl28810816.effectivegatecpm.com/62/ac/e6/62ace674f056ab1a7b3215a3a43ee6eb.js"></script>
+
 </head>
 <body>
 
@@ -530,6 +687,12 @@ footer strong { color:white; }
     <button class="btn-primary">Sign up free</button>
   </div>
 </nav>
+
+<!-- Adsterra Banner 728x90 — Header -->
+<div class="adsterra-banner-wrap" id="adsterra-header-banner">
+  <script>atOptions={'key':'4e32bdfae0897932709ae10cbd6728d6','format':'iframe','height':90,'width':728,'params':{}};</script>
+  <script src="https://www.highperformanceformat.com/4e32bdfae0897932709ae10cbd6728d6/invoke.js"></script>
+</div>
 
 <!-- ── Hero ── -->
 <section class="hero">
@@ -685,46 +848,111 @@ footer strong { color:white; }
   <div class="trust-item"><span class="trust-icon">⚡</span><span class="trust-text"><strong>No signup</strong> required</span></div>
 </div>
 
-<!-- ── Features ── -->
-<div class="features">
-  <div class="feature-card">
-    <div class="feature-icon">⚡</div>
-    <h3>Instant Generation</h3>
-    <p>QR codes generate in real-time as you type — no waiting, no clicking "generate", just instant results.</p>
+<!-- Adsterra Native Banner — Mid Page -->
+<div class="adsterra-footer-banner" id="adsterra-mid-banner">
+  <script async="async" data-cfasync="false" src="https://pl28810814.effectivegatecpm.com/8e2dc0379822ed65671b592821f1cd62/invoke.js"></script>
+  <div id="container-8e2dc0379822ed65671b592821f1cd62"></div>
+</div>
+
+<!-- ── Features + Side Banners Layout ── -->
+<div style="max-width:1100px;margin:0 auto;padding:80px 40px 40px;display:grid;grid-template-columns:1fr 160px;gap:24px;align-items:start;">
+
+  <!-- Features Grid -->
+  <div class="features" style="padding:0;max-width:100%;margin:0;">
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Instant Generation</h3>
+      <p>QR codes generate in real-time as you type — no waiting, no clicking "generate", just instant results.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎨</div>
+      <h3>Fully Customizable</h3>
+      <p>Choose your colors, sizes, and formats. Make your QR code match your brand perfectly.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Scan Analytics</h3>
+      <p>Track how many times your QR code is scanned, from which devices, and which locations. (Pro)</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔁</div>
+      <h3>Dynamic QR Codes</h3>
+      <p>Update your QR code destination anytime without reprinting. Perfect for campaigns and menus.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📱</div>
+      <h3>All Content Types</h3>
+      <p>Supports URLs, plain text, email, phone, WiFi, SMS, vCards and more — all in one tool.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💾</div>
+      <h3>Export Anywhere</h3>
+      <p>Download as PNG in multiple sizes. High-resolution exports ready for print and digital use.</p>
+    </div>
   </div>
-  <div class="feature-card">
-    <div class="feature-icon">🎨</div>
-    <h3>Fully Customizable</h3>
-    <p>Choose your colors, sizes, and formats. Make your QR code match your brand perfectly.</p>
+
+  <!-- Right Sidebar: Banner 160x600 -->
+  <div style="position:sticky;top:80px;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <script>atOptions={'key':'1496e307e3075a8e559527434f16d3d1','format':'iframe','height':600,'width':160,'params':{}};</script>
+    <script src="https://www.highperformanceformat.com/1496e307e3075a8e559527434f16d3d1/invoke.js"></script>
   </div>
-  <div class="feature-card">
-    <div class="feature-icon">📊</div>
-    <h3>Scan Analytics</h3>
-    <p>Track how many times your QR code is scanned, from which devices, and which locations. (Pro)</p>
-  </div>
-  <div class="feature-card">
-    <div class="feature-icon">🔁</div>
-    <h3>Dynamic QR Codes</h3>
-    <p>Update your QR code destination anytime without reprinting. Perfect for campaigns and menus.</p>
-  </div>
-  <div class="feature-card">
-    <div class="feature-icon">📱</div>
-    <h3>All Content Types</h3>
-    <p>Supports URLs, plain text, email, phone, WiFi, SMS, vCards and more — all in one tool.</p>
-  </div>
-  <div class="feature-card">
-    <div class="feature-icon">💾</div>
-    <h3>Export Anywhere</h3>
-    <p>Download as PNG in multiple sizes. High-resolution exports ready for print and digital use.</p>
-  </div>
+
+</div>
+
+<!-- Banner 300x250 + 320x50 Row -->
+<div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px;padding:20px 40px;background:var(--bg3);border-top:1px solid var(--feature-border);border-bottom:1px solid var(--feature-border);transition:background .3s;">
+  <!-- 300x250 -->
+  <script>atOptions={'key':'40f527cbbd11ca3bc98d222764e4352b','format':'iframe','height':250,'width':300,'params':{}};</script>
+  <script src="https://www.highperformanceformat.com/40f527cbbd11ca3bc98d222764e4352b/invoke.js"></script>
+  <!-- 160x300 -->
+  <script>atOptions={'key':'bf35f910cf88549e7ebff046f6f9d913','format':'iframe','height':300,'width':160,'params':{}};</script>
+  <script src="https://www.highperformanceformat.com/bf35f910cf88549e7ebff046f6f9d913/invoke.js"></script>
+</div>
+
+<!-- Mobile Banner 320x50 -->
+<div style="display:flex;justify-content:center;padding:12px;background:var(--bg);transition:background .3s;">
+  <script>atOptions={'key':'c023fb96c3d4f6aec5423520fe65949b','format':'iframe','height':50,'width':320,'params':{}};</script>
+  <script src="https://www.highperformanceformat.com/c023fb96c3d4f6aec5423520fe65949b/invoke.js"></script>
+</div>
+
+<!-- Banner 468x60 -->
+<div style="display:flex;justify-content:center;padding:10px;background:var(--bg3);border-top:1px solid var(--feature-border);transition:background .3s;">
+  <script>atOptions={'key':'f0acfcd57b8b96226f29e56271514a31','format':'iframe','height':60,'width':468,'params':{}};</script>
+  <script src="https://www.highperformanceformat.com/f0acfcd57b8b96226f29e56271514a31/invoke.js"></script>
 </div>
 
 <!-- ── Footer ── -->
 <footer>
   <strong>IloveQrGen</strong> &nbsp;·&nbsp; Free QR Code Generator &nbsp;·&nbsp; © 2026 All rights reserved &nbsp;·&nbsp;
   <a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none;">Privacy</a> &nbsp;·&nbsp;
-  <a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none;">Terms</a>
+  <a href="#" style="color:rgba(255,255,255,0.4);text-decoration:none;">Terms</a> &nbsp;·&nbsp;
+  <!-- Adsterra Smartlink -->
+  <a href="https://www.effectivegatecpm.com/ahq51j8a?key=23851c9d87da41eaa81212a0af6d9d6d" style="color:rgba(56,189,248,0.7);text-decoration:none;font-weight:600;" target="_blank">🔗 Sponsored</a>
 </footer>
+
+<!-- Adsterra Social Bar — Script loaded in <head> above, renders automatically -->
+<!-- Social bar placeholder removed — real script active -->
+
+<div class="interstitial-overlay" id="interstitialOverlay">
+  <div class="interstitial-box">
+    <button class="interstitial-close" id="interstitialClose">✕</button>
+    <div class="interstitial-ad-area">
+      <!-- Adsterra Banner 300x250 — Interstitial Popup -->
+      <script>atOptions={'key':'40f527cbbd11ca3bc98d222764e4352b','format':'iframe','height':250,'width':300,'params':{}};</script>
+      <script src="https://www.highperformanceformat.com/40f527cbbd11ca3bc98d222764e4352b/invoke.js"></script>
+    </div>
+    <div class="interstitial-skip-row">
+      <span class="interstitial-timer" id="interstitialTimer">
+        Skip in <span id="timerCount">5</span>s
+      </span>
+      <button class="btn-skip-ad" id="btnSkipAd">
+        ⬇ Download Now
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Adsterra Popunder — Script loaded in <head>, triggers automatically -->
 
 <div class="toast" id="toast"></div>
 
@@ -887,19 +1115,67 @@ document.querySelectorAll('.size-btn').forEach(btn => {
   });
 });
 
+// ── Interstitial Ad Logic ──
+let pendingDownload = false;
+let skipTimer = null;
+
+function showInterstitial(onComplete) {
+  const overlay = document.getElementById('interstitialOverlay');
+  const skipBtn = document.getElementById('btnSkipAd');
+  const timerEl = document.getElementById('timerCount');
+  let count = 5;
+
+  overlay.classList.add('show');
+  skipBtn.classList.remove('ready');
+  timerEl.textContent = count;
+
+  skipTimer = setInterval(() => {
+    count--;
+    timerEl.textContent = count;
+    if (count <= 0) {
+      clearInterval(skipTimer);
+      skipBtn.classList.add('ready');
+      document.getElementById('interstitialTimer').innerHTML = '✅ Ready!';
+    }
+  }, 1000);
+
+  skipBtn.onclick = () => {
+    clearInterval(skipTimer);
+    overlay.classList.remove('show');
+    document.getElementById('interstitialTimer').innerHTML = 'Skip in <span id="timerCount">5</span>s';
+    onComplete();
+  };
+}
+
+document.getElementById('interstitialClose').addEventListener('click', () => {
+  clearInterval(skipTimer);
+  document.getElementById('interstitialOverlay').classList.remove('show');
+  document.getElementById('interstitialTimer').innerHTML = 'Skip in <span id="timerCount">5</span>s';
+});
+
+// ── Social Bar Close (handled by Adsterra script itself) ──
+const socialBarEl = document.getElementById('adsterra-social-bar');
+if (socialBarEl) {
+  const closeBtn = document.getElementById('socialBarClose');
+  if (closeBtn) closeBtn.addEventListener('click', () => { socialBarEl.style.display = 'none'; });
+}
+
 // ── Download PNG ──
 document.getElementById('btnDownload').addEventListener('click', () => {
   const data = getCurrentData();
   if (!data) { showToast('⚠️ Please enter some content first.'); return; }
 
-  showToast('⏳ Preparing download…');
-  getHighResCanvas(canvas => {
-    if (!canvas) { showToast('❌ Could not generate QR.'); return; }
-    const link = document.createElement('a');
-    link.download = `ilovqrgen-${currentSize}px.png`;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-    showToast('✅ QR Code downloaded!');
+  // Show Interstitial Ad first, then download
+  showInterstitial(() => {
+    showToast('⏳ Preparing download…');
+    getHighResCanvas(canvas => {
+      if (!canvas) { showToast('❌ Could not generate QR.'); return; }
+      const link = document.createElement('a');
+      link.download = `ilovqrgen-${currentSize}px.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      showToast('✅ QR Code downloaded!');
+    });
   });
 });
 
